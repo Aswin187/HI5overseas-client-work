@@ -42,7 +42,7 @@ export default function ValuesSection() {
       bgColor: "bg-emerald-50",
     },
     {
-      icon: "ri-target-line",
+      icon: "ri-rocket-line",
       title: "Dedication",
       description: "to your goals",
       gradient: "from-blue-500 to-indigo-500",

@@ -478,11 +478,10 @@ export default function ContactPage() {
             </div>
             <div className="h-96 rounded-2xl overflow-hidden">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509374!2d144.9537353153167!3d-37.81627997975195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d4c2b349649%3A0xb6899234e561db11!2sEnvato!5e0!3m2!1sen!2sau!4v1619223739735!5m2!1sen!2sau"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.547789938255!2d80.20702067454677!3d13.049190513596894!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5267003246729d%3A0x250a3bb77e827cfa!2sHi5%20Overseas!5e0!3m2!1sen!2sin!4v1692876000000!5m2!1sen!2sin"
                 width="100%"
-                height="100%"
+                height="450"
                 style={{ border: 0 }}
-                allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
               ></iframe>

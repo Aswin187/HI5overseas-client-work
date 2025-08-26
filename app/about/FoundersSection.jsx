@@ -32,7 +32,7 @@ export default function FoundersSection() {
             name: 'JAYAKRISHNAN KESAVAN',
             role: 'Co-Founder & Director',
             background:
-                'Our journey began with a shared vision — to create opportunities beyond borders for students and professionals alike. With our combined dedication and experience, we started Hi5overseas to guide students in pursuing higher education abroad while also supporting skilled and unskilled professionals in finding overseas career opportunities. Our mission is to provide trusted, professional support that empowers individuals to achieve their global dreams with confidence.',
+                'Hi5overseas was founded with a shared vision to open global opportunities for students and professionals. With our expertise and dedication, we guide students towards higher education abroad and support professionals in building overseas careers. Our mission is to provide trusted, professional support that helps individuals pursue their global dreams with confidence',
             image1:
                 'https://png.pngtree.com/png-clipart/20230927/original/pngtree-man-avatar-image-for-profile-png-image_13001877.png',
             gradient: 'from-blue-500 to-purple-500',
@@ -42,7 +42,7 @@ export default function FoundersSection() {
             name: 'YUVARAJ KALLIMUTHU',
             role: 'Co-Founder & Director',
             background:
-                'Our journey began with a shared vision — to create opportunities beyond borders for students and professionals alike. With our combined dedication and experience, we started Hi5overseas to guide students in pursuing higher education abroad while also supporting skilled and unskilled professionals in finding overseas career opportunities. Our mission is to provide trusted, professional support that empowers individuals to achieve their global dreams with confidence.',
+                'Hi5overseas was founded with a shared vision to open global opportunities for students and professionals. With our expertise and dedication, we guide students towards higher education abroad and support professionals in building overseas careers. Our mission is to provide trusted, professional support that helps individuals pursue their global dreams with confidence.',
             image1:
                 'https://png.pngtree.com/png-clipart/20231019/original/pngtree-user-profile-avatar-png-image_13369991.png',
             gradient: 'from-purple-500 to-pink-500',

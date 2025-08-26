@@ -43,12 +43,12 @@ export default function ServicesSection() {
     {
       country: "United Kingdom",
       image:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2Q0fMhFol5sAfhnw80C-CGBRaxF1FtB7tAQ&s",
+        "https://www.godigit.com/content/dam/godigit/directportal/en/contenthm/how%20many%20cities%20are%20there%20in%20the%20united%20kingdom.jpg  ",
     },
     {
       country: "France",
       image:
-        "https://thesheratonholidaysinternational.com/wp-content/uploads/2024/05/shutterstock-111362132.webp",
+        "https://res.klook.com/image/upload/q_85/c_fill,w_750/v1645703027/blog/nbxewkp9ehoc7oeaeozi.jpg",
     },
   ];
 

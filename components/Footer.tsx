@@ -214,7 +214,7 @@ export default function Footer() {
             <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
               <div className="text-gray-400 text-sm">
                 &copy; {currentYear} Hi5Overseas. All rights reserved. | Making
-                dreams come true since 2020
+                dreams come true since 2025
               </div>
               <div className="flex space-x-6 text-sm">
                 <a
