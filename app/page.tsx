@@ -68,37 +68,37 @@ export default function Home() {
               <img
                 src="/assets/logo.png"
                 alt="Hi5Overseas"
-                className="h-12 w-auto"
+                className="h-20 w-25"
               />
             </Link>
             <div className="hidden md:flex space-x-8">
               <Link
                 href="/"
-                className="text-blue-600 font-medium cursor-pointer whitespace-nowrap"
+                className="text-blue-600 font-medium cursor-pointer whitespace-nowrap font-semibold uppercase"
               >
                 Home
               </Link>
               <Link
                 href="/about"
-                className="text-black-700 hover:text-blue-600 transition-colors cursor-pointer whitespace-nowrap"
+                className="text-black-700 hover:text-blue-600 transition-colors cursor-pointer whitespace-nowrap font-semibold uppercase"
               >
                 About
               </Link>
               <Link
                 href="/services"
-                className="text-black-700 hover:text-blue-600 transition-colors cursor-pointer whitespace-nowrap"
+                className="text-black-700 hover:text-blue-600 transition-colors cursor-pointer whitespace-nowrap font-semibold uppercase"
               >
                 Services
               </Link>
               <Link
                 href="/contact"
-                className="text-black-700 hover:text-blue-600 transition-colors cursor-pointer whitespace-nowrap"
+                className="text-black-700 hover:text-blue-600 transition-colors cursor-pointer whitespace-nowrap font-semibold uppercase"
               >
                 Contact
               </Link>
             </div>
             <button
-              className="md:hidden text-black-700 w-6 h-6 flex items-center justify-center cursor-pointer"
+              className="md:hidden text-black-700 w-6 h-6 flex items-center justify-center cursor-pointer font-bold"
               onClick={() => setIsNavOpen(true)}
             >
               <i className="ri-menu-line text-xl"></i>
@@ -119,10 +119,13 @@ export default function Home() {
                   : "opacity-0 -translate-x-10"
               }`}
             >
-              <div className="backdrop-blur-lg bg-white/10 rounded-3xl p-8 border border-white/20 shadow-2xl">
+              <div
+                className="backdrop-blur-lg bg-white/10 rounded-3xl p-8 border border-white/20 shadow-2xl 
+                animate-bounce-smooth"
+              >
                 <h1 className="text-4xl md:text-6xl font-bold text-black-700 mb-6 leading-tight font-poppins">
                   Welcome To
-                  <span className="block text-blue-800  text-3xl md:text-5xl mt-2">
+                  <span className="block text-blue-800 text-3xl md:text-5xl mt-2">
                     Hi5Overseas
                   </span>
                 </h1>
@@ -140,26 +143,24 @@ export default function Home() {
                 <p className="text-lg text-black-700 mb-8 leading-relaxed font-inter">
                   We support you throughout, from identifying the ideal
                   university or workplace to obtaining a visa and settling in a
-                  new country. At Hi5Overseas,it's more than relocating it's
+                  new country. At Hi5Overseas, it's more than relocating it's
                   about shaping personal achievements that last.
                 </p>
+
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Link
                     href="/services"
                     className="relative px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-700 text-white font-semibold rounded-full shadow-lg cursor-pointer whitespace-nowrap transition-transform duration-500 hover:scale-110 hover:rotate-1 overflow-hidden"
                   >
                     <span className="relative z-10">Explore Our Services</span>
-
-                    {/* Neon glow effect */}
                     <span className="absolute inset-0 rounded-full border-2 border-black-400 animate-[neonPulse_2s_infinite]"></span>
                   </Link>
+
                   <Link
                     href="/contact"
                     className="relative px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-700 text-white font-semibold rounded-full shadow-lg cursor-pointer whitespace-nowrap transition-transform duration-500 hover:scale-110 hover:rotate-1 overflow-hidden"
                   >
                     <span className="relative z-10">Start Your Journey</span>
-
-                    {/* Neon glow effect */}
                     <span className="absolute inset-0 rounded-full border-2 border-black-400 animate-[neonPulse_2s_infinite]"></span>
                   </Link>
                 </div>
@@ -174,13 +175,28 @@ export default function Home() {
                   : "opacity-0 translate-x-10"
               }`}
             >
-              <div className="relative">
+              <div className="relative group">
+                {/* Animated Image */}
                 <img
-                  src="https://readdy.ai/api/search-image?query=international%20students%20celebrating%20graduation%20ceremony%20with%20diverse%20group%20holding%20flags%20from%20different%20countries%20against%20modern%20university%20campus%20background%2C%20bright%20natural%20lighting%2C%20professional%20photography%20style%2C%20inspiring%20educational%20atmosphere&width=600&height=500&seq=hero-main&orientation=landscape"
+                  src="https://wpvip.edutopia.org/wp-content/uploads/2022/10/shutterstock_183854621_1.jpg?w=2880&quality=85"
                   alt="International Students Success"
-                  className="w-full h-96 object-cover rounded-3xl shadow-2xl"
+                  className="w-full h-96 object-cover rounded-3xl shadow-2xl
+                  transform transition-transform duration-700
+                  group-hover:scale-110 group-hover:rotate-2
+                  animate-pan"
                 />
+
+                {/* Gradient Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-3xl"></div>
+
+                {/* Floating Icon Box */}
+                <div
+                  className="absolute -top-4 -right-4 backdrop-blur-lg bg-white/20 rounded-2xl 
+                  p-4 border border-gray/60 shadow-lg
+                  animate-rotate-slow"
+                >
+                  <i className="ri-graduation-cap-line text-3xl text-blue-600 animate-pulse-glow"></i>
+                </div>
               </div>
             </div>
           </div>
@@ -192,25 +208,36 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left - Image */}
-            <div className="relative">
+            <div className="relative group">
               <img
-                src="https://readdy.ai/api/search-image?query=modern%20university%20campus%20with%20international%20students%20studying%20together%20with%20books%20and%20laptops%2C%20beautiful%20architecture%20in%20background%2C%20natural%20lighting%2C%20diverse%20students%20from%20different%20cultures%2C%20academic%20atmosphere%2C%20clean%20simple%20background&width=600&height=500&seq=study-abroad&orientation=landscape"
+                src="https://www.odkrywamyzakryte.com/wp-content/uploads/2018/08/42289373_m.jpg"
                 alt="Study Abroad"
-                className="w-full h-96 object-cover rounded-3xl shadow-2xl"
+                className="w-full h-96 object-cover rounded-3xl shadow-2xl
+                transform transition-transform duration-700
+                group-hover:scale-110 group-hover:rotate-2
+                 animate-pan"
               />
-              <div className="absolute -top-4 -right-4 backdrop-blur-lg bg-white/20 rounded-2xl p-4 border border-gray/60 ">
-                <i className="ri-graduation-cap-line text-3xl text-blue-600"></i>
+              <div
+                className="absolute -top-4 -right-4 backdrop-blur-lg bg-white/20 rounded-2xl 
+                p-4 border border-gray/60 shadow-lg
+                animate-rotate-slow"
+              >
+                <i className="ri-graduation-cap-line text-3xl text-blue-600 animate-pulse-glow"></i>
               </div>
             </div>
 
             {/* Right - Content */}
-            <div className="backdrop-blur-lg bg-white/10 rounded-3xl p-8 border border-white/20 shadow-xl">
+            <div
+              className="backdrop-blur-lg bg-white/10 rounded-3xl p-8 border border-white/20 shadow-xl 
+                animate-bounce-card hover:scale-105 transition-transform duration-500"
+            >
               <h2 className="text-3xl md:text-4xl font-bold text-black-700 mb-6 leading-tight font-poppins">
                 Want to Study Abroad?
                 <span className="block text-blue-600">
                   We'll Make It Happen
                 </span>
               </h2>
+
               <p className="text-lg text-black-700 mb-8 leading-relaxed font-inter">
                 Every student has a different dream—and we get that. Whether
                 you're planning to study engineering, design, business, or arts,
@@ -227,13 +254,13 @@ export default function Home() {
                   {studyDestinations.map((dest, index) => (
                     <div
                       key={dest.name}
-                      className={`p-4 rounded-xl border border-gray/60  transition-all duration-500 cursor-pointer hover:scale-105 ${
+                      className={`p-4 rounded-xl border border-gray/60 transition-all duration-500 cursor-pointer hover:scale-110 ${
                         activeDestination === index
                           ? "backdrop-blur-lg bg-gradient-to-r " +
                             dest.color +
                             " text-white shadow-lg"
                           : "backdrop-blur-lg bg-white/20 hover:bg-white/30"
-                      }`}
+                      } animate-bounce-card`}
                     >
                       <div className="flex items-center space-x-3">
                         <i className={`${dest.icon} text-2xl`}></i>
@@ -258,7 +285,8 @@ export default function Home() {
                 ].map((service, index) => (
                   <div
                     key={index}
-                    className="flex items-center space-x-3 text-black-700"
+                    className="flex items-center space-x-3 text-black-700 animate-bounce-card"
+                    style={{ animationDelay: `${index * 0.2}s` }} // delay for staggered effect
                   >
                     <div className="w-2 h-2 bg-blue-400 rounded-full animate-glow"></div>
                     <span>{service}</span>
@@ -298,7 +326,7 @@ export default function Home() {
                   <div className="group backdrop-blur-lg bg-white/20 rounded-2xl overflow-hidden border border-gray/60  hover:scale-105 transition-all duration-500 cursor-pointer shadow-lg hover:shadow-xl">
                     <div className="relative h-32 overflow-hidden">
                       <img
-                        src="https://readdy.ai/api/search-image?query=Singapore%20Marina%20Bay%20business%20district%20skyline%20with%20modern%20skyscrapers%20and%20corporate%20offices%2C%20professional%20business%20atmosphere%2C%20clean%20architecture%2C%20bright%20natural%20lighting%2C%20career%20opportunities%20theme&width=300&height=200&seq=work-singapore&orientation=landscape"
+                        src="https://cdn-images-1.medium.com/v2/resize:fit:1200/1*LLNz0N_PjuUlCDuOykT_yw.jpeg"
                         alt="Singapore Work Opportunities"
                         className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                       />
@@ -323,7 +351,7 @@ export default function Home() {
                   <div className="group backdrop-blur-lg bg-white/20 rounded-2xl overflow-hidden border border-gray/60  hover:scale-105 transition-all duration-500 cursor-pointer shadow-lg hover:shadow-xl">
                     <div className="relative h-32 overflow-hidden">
                       <img
-                        src="https://readdy.ai/api/search-image?query=European%20cities%20montage%20showing%20London%20Big%20Ben%2C%20Paris%20Eiffel%20Tower%2C%20Berlin%20Brandenburg%20Gate%2C%20modern%20corporate%20buildings%2C%20professional%20work%20environment%2C%20diverse%20career%20opportunities%20across%20Europe&width=300&height=200&seq=work-europe&orientation=landscape"
+                        src="https://i.natgeofe.com/n/075e4f53-f271-4f7a-855a-5eccdba43587/01_Europe_16x9.jpg?w=1200"
                         alt="Europe Work Opportunities"
                         className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                       />
@@ -348,7 +376,7 @@ export default function Home() {
                   <div className="group backdrop-blur-lg bg-white/20 rounded-2xl overflow-hidden border border-gray/60  hover:scale-105 transition-all duration-500 cursor-pointer shadow-lg hover:shadow-xl">
                     <div className="relative h-32 overflow-hidden">
                       <img
-                        src="https://readdy.ai/api/search-image?query=Split%20view%20showing%20Sydney%20Opera%20House%20with%20business%20district%20and%20Toronto%20CN%20Tower%20skyline%2C%20modern%20corporate%20environments%2C%20professional%20work%20opportunities%20in%20Australia%20and%20Canada&width=300&height=200&seq=work-aus-can&orientation=landscape"
+                        src="https://dwyeyw425tqez.cloudfront.net/blogposts/427/47a5493e49d54baf6f25ff9a4f5853f1.jpg"
                         alt="Australia & Canada Work"
                         className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                       />
@@ -446,14 +474,35 @@ export default function Home() {
             </div>
 
             {/* Right - Image */}
-            <div className="relative">
-              <img
-                src="https://readdy.ai/api/search-image?query=professional%20business%20meeting%20with%20diverse%20international%20team%20in%20modern%20office%2C%20people%20shaking%20hands%2C%20global%20business%20atmosphere%2C%20clean%20corporate%20environment%2C%20natural%20lighting%2C%20success%20and%20career%20growth%20theme&width=600&height=500&seq=work-abroad&orientation=landscape"
-                alt="Work Abroad"
-                className="w-full h-96 object-cover rounded-3xl shadow-2xl"
-              />
-              <div className="absolute -top-4 -left-4 backdrop-blur-lg bg-white/20 rounded-2xl p-4 border border-gray/60 ">
-                <i className="ri-briefcase-line text-3xl text-blue-400"></i>
+            <div
+              className={`transition-all duration-1000 delay-300 ${
+                isVisible
+                  ? "opacity-100 translate-x-0"
+                  : "opacity-0 translate-x-10"
+              }`}
+            >
+              <div className="relative group">
+                {/* Animated Image */}
+                <img
+                  src="https://imageio.forbes.com/specials-images/imageserve/66eb02da27dc7e9a3676195a/0x0.jpg?format=jpg&amp;height=900&amp;width=1600&amp;fit=bounds"
+                  alt="Work Abroad"
+                  className="w-full h-96 object-cover rounded-3xl shadow-2xl
+                  transform transition-transform duration-700
+                  group-hover:scale-110 group-hover:rotate-2
+                  animate-pan"
+                />
+
+                {/* Gradient Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-3xl"></div>
+
+                {/* Floating Icon Box */}
+                <div
+                  className="absolute -top-4 -right-4 backdrop-blur-lg bg-white/20 rounded-2xl 
+                  p-4 border border-gray/60 shadow-lg
+                  animate-rotate-slow"
+                >
+                  <i className="ri-briefcase-line text-3xl text-blue-600 animate-pulse-glow"></i>
+                </div>
               </div>
             </div>
           </div>
@@ -481,7 +530,7 @@ export default function Home() {
                   <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:scale-110 transition-transform duration-500">
                     <i className="ri-heart-line text-2xl text-white"></i>
                   </div>
-                  <h3 className="text-xl font-semibold text-black-700 mb-3">
+                  <h3 className="font-bold text-black-700 text-2xl font-serif italic">
                     Real Advice
                   </h3>
                   <p className="text-lg text-black-700 mb-8 leading-relaxed font-inter">
@@ -504,7 +553,7 @@ export default function Home() {
                   <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:scale-110 transition-transform duration-500">
                     <i className="ri-shield-check-line text-2xl text-white"></i>
                   </div>
-                  <h3 className="text-xl font-semibold text-black-700 mb-3">
+                  <h3 className="font-bold text-black-700 text-2xl font-serif italic">
                     Honest Work
                   </h3>
                   <p className="text-lg text-black-700 mb-8 leading-relaxed font-inter">
@@ -527,7 +576,7 @@ export default function Home() {
                   <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:scale-110 transition-transform duration-500">
                     <i className="ri-trophy-line text-2xl text-white"></i>
                   </div>
-                  <h3 className="text-xl font-semibold text-black-700 mb-3">
+                  <h3 className="font-bold text-black-700 text-2xl font-serif italic">
                     Success Stories
                   </h3>
                   <p className="text-lg text-black-700 mb-8 leading-relaxed font-inter">
@@ -811,28 +860,28 @@ export default function Home() {
               <Link
                 href="/"
                 onClick={() => setIsNavOpen(false)}
-                className="text-blue-600 font-medium text-lg"
+                className="text-blue-600 font-medium text-lg font-semibold uppercase"
               >
                 Home
               </Link>
               <Link
                 href="/about"
                 onClick={() => setIsNavOpen(false)}
-                className="text-black-700 hover:text-blue-600 text-lg"
+                className="text-black-700 hover:text-blue-600 text-lg font-semibold uppercase"
               >
                 About
               </Link>
               <Link
                 href="/services"
                 onClick={() => setIsNavOpen(false)}
-                className="text-black-700 hover:text-blue-600 text-lg"
+                className="text-black-700 hover:text-blue-600 text-lg font-semibold uppercase"
               >
                 Services
               </Link>
               <Link
                 href="/contact"
                 onClick={() => setIsNavOpen(false)}
-                className="text-black-700 hover:text-blue-600 text-lg"
+                className="text-black-700 hover:text-blue-600 text-lg font-semibold uppercase"
               >
                 Contact
               </Link>

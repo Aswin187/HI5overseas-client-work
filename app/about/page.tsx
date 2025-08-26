@@ -71,10 +71,10 @@ export default function AboutPage() {
               <img
                 src="/assets/logo.png"
                 alt="Hi5Overseas"
-                className="h-12 w-auto"
+                className="h-20 w-25"
               />
             </Link>
-            <div className="hidden md:flex space-x-8">
+            <div className="hidden md:flex space-x-8 font-semibold uppercase">
               <Link href="/" className={linkClasses("/")}>
                 Home
               </Link>
@@ -122,28 +122,28 @@ export default function AboutPage() {
               <Link
                 href="/"
                 onClick={() => setIsNavOpen(false)}
-                className="text-blue-600 font-medium text-lg"
+                className="text-blue-600 font-medium text-lg font-semibold uppercase"
               >
                 Home
               </Link>
               <Link
                 href="/about"
                 onClick={() => setIsNavOpen(false)}
-                className="text-gray-700 hover:text-blue-600 text-lg"
+                className="text-gray-700 hover:text-blue-600 text-lg font-semibold uppercase"
               >
                 About
               </Link>
               <Link
                 href="/services"
                 onClick={() => setIsNavOpen(false)}
-                className="text-gray-700 hover:text-blue-600 text-lg"
+                className="text-gray-700 hover:text-blue-600 text-lg font-semibold uppercase"
               >
                 Services
               </Link>
               <Link
                 href="/contact"
                 onClick={() => setIsNavOpen(false)}
-                className="text-gray-700 hover:text-blue-600 text-lg"
+                className="text-gray-700 hover:text-blue-600 text-lg font-semibold uppercase"
               >
                 Contact
               </Link>

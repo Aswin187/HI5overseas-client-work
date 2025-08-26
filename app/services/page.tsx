@@ -31,37 +31,37 @@ export default function ServicesPage() {
               <img
                 src="/assets/logo.png"
                 alt="Hi5Overseas"
-                className="h-12 w-auto"
+                className="h-20 w-25"
               />
             </Link>
             <div className="hidden md:flex space-x-8">
               <Link
                 href="/"
-                className="text-gray-700 hover:text-blue-600 transition-colors cursor-pointer whitespace-nowrap"
+                className="text-gray-700 hover:text-blue-600 transition-colors cursor-pointer whitespace-nowrap font-semibold uppercase"
               >
                 Home
               </Link>
               <Link
                 href="/about"
-                className="text-gray-700 hover:text-blue-600 transition-colors cursor-pointer whitespace-nowrap"
+                className="text-gray-700 hover:text-blue-600 transition-colors cursor-pointer whitespace-nowrap font-semibold uppercase"
               >
                 About
               </Link>
               <Link
                 href="/services"
-                className="text-blue-600 font-medium cursor-pointer whitespace-nowrap"
+                className="text-blue-600 font-medium cursor-pointer whitespace-nowrap font-semibold uppercase"
               >
                 Services
               </Link>
               <Link
                 href="/contact"
-                className="text-gray-700 hover:text-blue-600 transition-colors cursor-pointer whitespace-nowrap"
+                className="text-gray-700 hover:text-blue-600 transition-colors cursor-pointer whitespace-nowrap font-semibold uppercase"
               >
                 Contact
               </Link>
             </div>
             <button
-              className="md:hidden text-gray-700 w-6 h-6 flex items-center justify-center cursor-pointer"
+              className="md:hidden text-gray-700 w-6 h-6 flex items-center justify-center cursor-pointer font-semibold uppercase"
               onClick={() => setIsNavOpen(true)}
             >
               <i className="ri-menu-line text-xl"></i>
@@ -89,28 +89,28 @@ export default function ServicesPage() {
               <Link
                 href="/"
                 onClick={() => setIsNavOpen(false)}
-                className="text-blue-600 font-medium text-lg"
+                className="text-blue-600 font-medium text-lg font-semibold uppercase"
               >
                 Home
               </Link>
               <Link
                 href="/about"
                 onClick={() => setIsNavOpen(false)}
-                className="text-gray-700 hover:text-blue-600 text-lg"
+                className="text-gray-700 hover:text-blue-600 text-lg font-semibold uppercase"
               >
                 About
               </Link>
               <Link
                 href="/services"
                 onClick={() => setIsNavOpen(false)}
-                className="text-gray-700 hover:text-blue-600 text-lg"
+                className="text-gray-700 hover:text-blue-600 text-lg font-semibold uppercase"
               >
                 Services
               </Link>
               <Link
                 href="/contact"
                 onClick={() => setIsNavOpen(false)}
-                className="text-gray-700 hover:text-blue-600 text-lg"
+                className="text-gray-700 hover:text-blue-600 text-lg font-semibold uppercase"
               >
                 Contact
               </Link>
@@ -118,7 +118,6 @@ export default function ServicesPage() {
           </div>
         </div>
       )}
-      // filepath: c:\Users\aswin\Downloads\Hi5 Overseas\app\about\page.tsx
       {/* Footer */}
       <Footer />
       {/* WhatsApp Button */}

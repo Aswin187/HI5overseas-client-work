@@ -96,31 +96,31 @@ export default function ContactPage() {
               <img
                 src="/assets/logo.png"
                 alt="Hi5Overseas"
-                className="h-12 w-auto"
+                className="h-20 w-25"
               />
             </Link>
             <div className="hidden md:flex space-x-8">
               <Link
                 href="/"
-                className="text-gray-700 hover:text-blue-600 transition-colors cursor-pointer whitespace-nowrap"
+                className="text-gray-700 hover:text-blue-600 transition-colors cursor-pointer whitespace-nowrap font-semibold uppercase"
               >
                 Home
               </Link>
               <Link
                 href="/about"
-                className="text-gray-700 hover:text-blue-600 transition-colors cursor-pointer whitespace-nowrap"
+                className="text-gray-700 hover:text-blue-600 transition-colors cursor-pointer whitespace-nowrap font-semibold uppercase"
               >
                 About
               </Link>
               <Link
                 href="/services"
-                className="text-gray-700 hover:text-blue-600 transition-colors cursor-pointer whitespace-nowrap"
+                className="text-gray-700 hover:text-blue-600 transition-colors cursor-pointer whitespace-nowrap font-semibold uppercase"
               >
                 Services
               </Link>
               <Link
                 href="/contact"
-                className="text-blue-600 font-medium cursor-pointer whitespace-nowrap"
+                className="text-blue-600 font-medium cursor-pointer whitespace-nowrap font-semibold uppercase"
               >
                 Contact
               </Link>
@@ -566,28 +566,28 @@ export default function ContactPage() {
               <Link
                 href="/"
                 onClick={() => setIsNavOpen(false)}
-                className="text-blue-600 font-medium text-lg"
+                className="text-blue-600 font-medium text-lg font-semibold uppercase"
               >
                 Home
               </Link>
               <Link
                 href="/about"
                 onClick={() => setIsNavOpen(false)}
-                className="text-gray-700 hover:text-blue-600 text-lg"
+                className="text-gray-700 hover:text-blue-600 text-lg font-semibold uppercase"
               >
                 About
               </Link>
               <Link
                 href="/services"
                 onClick={() => setIsNavOpen(false)}
-                className="text-gray-700 hover:text-blue-600 text-lg"
+                className="text-gray-700 hover:text-blue-600 text-lg font-semibold uppercase"
               >
                 Services
               </Link>
               <Link
                 href="/contact"
                 onClick={() => setIsNavOpen(false)}
-                className="text-gray-700 hover:text-blue-600 text-lg"
+                className="text-gray-700 hover:text-blue-600 text-lg font-semibold uppercase"
               >
                 Contact
               </Link>

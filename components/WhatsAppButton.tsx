@@ -6,9 +6,9 @@ export default function WhatsAppButton() {
   const [isHovered, setIsHovered] = useState(false);
 
   const handleWhatsAppClick = () => {
-    const phoneNumber = "+8113001613"; // Replace with actual WhatsApp number
+    const phoneNumber = "+91 9384818320"; // Replace with actual WhatsApp number
     const message =
-      "Hi! I am interested in your services at Hi5Overseas. Could you please help me?";
+      "Hi! I am interested in your services at Hi5Overseas. Could you please provide me with more details ?";
     const whatsappUrl = `https://wa.me/${phoneNumber.replace(
       /[^0-9]/g,
       ""
