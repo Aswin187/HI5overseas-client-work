@@ -35,6 +35,7 @@ export default function ProcessSection() {
       title: "Initial Consultation",
       description:
         "We understand your goals, background, and preferences through a detailed consultation.",
+      icon: "ri-chat-3-line",
       gradient: "from-blue-500 to-cyan-500",
     },
     {
@@ -42,6 +43,7 @@ export default function ProcessSection() {
       title: "Personalized Planning",
       description:
         "Create a customized roadmap tailored to your specific needs and aspirations.",
+      icon: "ri-roadmap-line",
       gradient: "from-purple-500 to-pink-500",
     },
     {
@@ -49,6 +51,7 @@ export default function ProcessSection() {
       title: "Application Process",
       description:
         "Guide you through applications, documentation, and submission processes.",
+      icon: "ri-file-text-line",
       gradient: "from-green-500 to-blue-500",
     },
     {
@@ -56,6 +59,7 @@ export default function ProcessSection() {
       title: "Visa & Documentation",
       description:
         "Handle all visa requirements and ensure your documentation is perfect.",
+      icon: "ri-shield-check-line",
       gradient: "from-orange-500 to-red-500",
     },
     {
@@ -63,6 +67,7 @@ export default function ProcessSection() {
       title: "Pre-Departure Support",
       description:
         "Prepare you for your journey with comprehensive pre-departure guidance.",
+      icon: "ri-flight-takeoff-line",
       gradient: "from-indigo-500 to-purple-500",
     },
   ];
@@ -207,7 +212,7 @@ export default function ProcessSection() {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
               {[
                 {
-                  number: "95%",
+                  number: "100%",
                   label: "Success Rate",
                   icon: "ri-trophy-line",
                   color: "text-yellow-600",
@@ -225,7 +230,7 @@ export default function ProcessSection() {
                   color: "text-green-600",
                 },
                 {
-                  number: "50+",
+                  number: "10+",
                   label: "Countries",
                   icon: "ri-global-line",
                   color: "text-purple-600",

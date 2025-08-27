@@ -1,7 +1,12 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.5.0/remixicon.min.css');
+@import url("https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css");
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 
 @keyframes glow {
@@ -59,7 +64,7 @@
 }
 
 .animate-bounce-slow {
-    animation: bounce-slow 2.5s infinite ease-in-out;
+    animation: bounce-slow 1s infinite ease-in-out;
 }
 
 .animate-glow {
@@ -282,9 +287,3 @@
 .animate-bounce-card {
     animation: bounce-card 2s ease-in-out infinite;
 }
-
-
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;

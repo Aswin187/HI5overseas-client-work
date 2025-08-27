@@ -61,31 +61,34 @@ export default function ServicesHero() {
               {/* Animated Service Icons */}
               <div className="flex flex-col sm:flex-row sm:justify-center sm:space-x-8 space-y-6 sm:space-y-0 mt-6 sm:mt-12">
                 <div className="animate-bounce delay-100">
-                  <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-2xl flex items-center justify-center backdrop-blur-lg border border-white/20 hover:scale-110 transition-transform duration-300 mx-auto">
+                  <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-2xl flex items-center justify-center backdrop-blur-lg border border-white/20 hover:scale-110 transition-transform duration-100 mx-auto">
                     <i className="ri-graduation-cap-line text-white text-2xl sm:text-3xl"></i>
                   </div>
                   <p className="text-white/80 text-xs sm:text-sm mt-2">
                     Study Abroad
                   </p>
                 </div>
-                <div className="animate-bounce delay-300">
-                  <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-r from-purple-400 to-pink-400 rounded-2xl flex items-center justify-center backdrop-blur-lg border border-white/20 hover:scale-110 transition-transform duration-300 mx-auto">
+
+                <div className="animate-bounce delay-200">
+                  <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-r from-purple-400 to-pink-400 rounded-2xl flex items-center justify-center backdrop-blur-lg border border-white/20 hover:scale-110 transition-transform duration-100 mx-auto">
                     <i className="ri-briefcase-line text-white text-2xl sm:text-3xl"></i>
                   </div>
                   <p className="text-white/80 text-xs sm:text-sm mt-2">
                     Jobs Abroad
                   </p>
                 </div>
-                <div className="animate-bounce delay-500">
-                  <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-r from-green-400 to-blue-400 rounded-2xl flex items-center justify-center backdrop-blur-lg border border-white/20 hover:scale-110 transition-transform duration-300 mx-auto">
+
+                <div className="animate-bounce delay-300">
+                  <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-r from-green-400 to-blue-400 rounded-2xl flex items-center justify-center backdrop-blur-lg border border-white/20 hover:scale-110 transition-transform duration-100 mx-auto">
                     <i className="ri-passport-line text-white text-2xl sm:text-3xl"></i>
                   </div>
                   <p className="text-white/80 text-xs sm:text-sm mt-2">
                     Visa Support
                   </p>
                 </div>
-                <div className="animate-bounce delay-700">
-                  <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-r from-orange-400 to-red-400 rounded-2xl flex items-center justify-center backdrop-blur-lg border border-white/20 hover:scale-110 transition-transform duration-300 mx-auto">
+
+                <div className="animate-bounce delay-400">
+                  <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-r from-orange-400 to-red-400 rounded-2xl flex items-center justify-center backdrop-blur-lg border border-white/20 hover:scale-110 transition-transform duration-100 mx-auto">
                     <i className="ri-plane-line text-white text-2xl sm:text-3xl"></i>
                   </div>
                   <p className="text-white/80 text-xs sm:text-sm mt-2">

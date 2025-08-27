@@ -35,10 +35,10 @@ export default function MissionVision() {
     if (isVisible) {
       let interval = setInterval(() => {
         setCounts((prev) => ({
-          students: prev.students < 5000 ? prev.students + 50 : 5000,
-          countries: prev.countries < 25 ? prev.countries + 1 : 25,
-          success: prev.success < 98 ? prev.success + 1 : 98,
-          years: prev.years < 10 ? prev.years + 1 : 10,
+          students: prev.students < 1000 ? prev.students + 50 : 1000,
+          countries: prev.countries < 10 ? prev.countries + 1 : 10,
+          success: prev.success < 100 ? prev.success + 1 : 100,
+          years: prev.years < 5 ? prev.years + 1 : 5,
         }));
       }, 40);
 

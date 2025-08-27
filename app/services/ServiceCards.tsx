@@ -54,7 +54,7 @@ export default function ServiceCards() {
         "Visa and relocation guidance",
         "Post-arrival support for smooth onboarding",
       ],
-      gradient: "from-purple-500 to-pink-500",
+      gradient: "from-blue-500 to-cyan-500",
       bgImage:
         "https://www.raoconsultants.com/wp-content/uploads/2024/05/1-38.png",
       animation: {
@@ -75,7 +75,7 @@ export default function ServiceCards() {
         "Dependent & visitor visas",
         "Document checks & interview prep",
       ],
-      gradient: "from-green-500 to-blue-500",
+      gradient: "from-blue-500 to-cyan-500",
       bgImage:
         "https://www.joinincampus.com/assets/images/web/visa-assistance-thumb.png",
       animation: {

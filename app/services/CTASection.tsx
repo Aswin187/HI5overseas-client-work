@@ -97,18 +97,18 @@ export default function CTASection() {
                 <div className="flex items-center space-x-2">
                   <i className="ri-shield-check-line text-green-400 text-xl"></i>
                   <span className="text-sm font-medium">
-                    Trusted by 5000+ Students
+                    Trusted by 1000+ Students
                   </span>
                 </div>
                 <div className="flex items-center space-x-2">
                   <i className="ri-time-line text-blue-400 text-xl"></i>
                   <span className="text-sm font-medium">
-                    10+ Years Experience
+                    5+ Years Experience
                   </span>
                 </div>
                 <div className="flex items-center space-x-2">
                   <i className="ri-global-line text-purple-400 text-xl"></i>
-                  <span className="text-sm font-medium">50+ Countries</span>
+                  <span className="text-sm font-medium">10+ Countries</span>
                 </div>
               </div>
             </div>
