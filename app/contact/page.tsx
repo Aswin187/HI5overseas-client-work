@@ -17,9 +17,20 @@ export default function ContactPage() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState("");
   const [isNavOpen, setIsNavOpen] = useState(false);
+  const [errors, setErrors] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
 
   useEffect(() => {
     setIsVisible(true);
+
+    // Check if on mobile
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    if (isMobile) {
+      console.log("Running on mobile device");
+    }
   }, []);
 
   const handleInputChange = (
@@ -32,15 +43,45 @@ export default function ContactPage() {
       ...prev,
       [name]: value,
     }));
+
+    // Clear error when user starts typing
+    if (errors[name as keyof typeof errors] && value) {
+      setErrors((prev) => ({
+        ...prev,
+        [name]: "",
+      }));
+    }
+  };
+
+  const validateForm = () => {
+    const newErrors = {
+      name: !formData.name ? "Name is required" : "",
+      email: !formData.email
+        ? "Email is required"
+        : !/\S+@\S+\.\S+/.test(formData.email)
+        ? "Invalid email format"
+        : "",
+      message: !formData.message ? "Message is required" : "",
+    };
+
+    setErrors(newErrors);
+    return !Object.values(newErrors).some((error) => error !== "");
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    console.log("Form submission started"); // Debug log
+
+    if (!validateForm()) {
+      setSubmitStatus("error");
+      return;
+    }
+
     setIsSubmitting(true);
     setSubmitStatus("");
 
     try {
-      // Send email using API endpoint
+      console.log("Sending request to API..."); // Debug log
       const response = await fetch("/api/contact", {
         method: "POST",
         headers: {
@@ -49,27 +90,33 @@ export default function ContactPage() {
         body: JSON.stringify(formData),
       });
 
-      const result = await response.json();
+      console.log("Response status:", response.status); // Debug log
 
-      if (response.ok) {
-        setIsSubmitting(false);
-        setSubmitStatus("success");
-        setFormData({
-          name: "",
-          email: "",
-          phone: "",
-          service: "",
-          message: "",
-        });
-
-        setTimeout(() => {
-          setSubmitStatus("");
-        }, 5000);
-      } else {
-        throw new Error(result.error || "Failed to send message");
+      if (!response.ok) {
+        const errorData = await response.json().catch(() => ({}));
+        throw new Error(
+          errorData.message || `HTTP error! status: ${response.status}`
+        );
       }
+
+      const result = await response.json();
+      console.log("API response:", result); // Debug log
+
+      setIsSubmitting(false);
+      setSubmitStatus("success");
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        service: "",
+        message: "",
+      });
+
+      setTimeout(() => {
+        setSubmitStatus("");
+      }, 5000);
     } catch (error) {
-      console.error("Error sending email:", error);
+      console.error("Submission error:", error); // Detailed error log
       setIsSubmitting(false);
       setSubmitStatus("error");
 
@@ -81,6 +128,40 @@ export default function ContactPage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50 relative overflow-hidden">
+      <style jsx global>{`
+        /* Mobile form fixes */
+        @media (max-width: 768px) {
+          .form-input,
+          .form-select,
+          .form-textarea {
+            font-size: 16px !important;
+            min-height: 44px !important;
+          }
+
+          .form-button {
+            min-height: 50px !important;
+            font-size: 18px !important;
+          }
+        }
+
+        /* Prevent zoom on iOS */
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        textarea,
+        select {
+          font-size: 16px;
+        }
+
+        /* Ensure proper touch targets */
+        button,
+        input,
+        select,
+        textarea {
+          touch-action: manipulation;
+        }
+      `}</style>
+
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-20 left-10 w-64 h-64 bg-blue-200/30 rounded-full blur-3xl animate-pulse"></div>
@@ -312,9 +393,14 @@ export default function ContactPage() {
                     value={formData.name}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 backdrop-blur-lg bg-white/20 border border-white/30 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-800 placeholder-gray-500"
+                    className="w-full px-4 py-3 backdrop-blur-lg bg-white/20 border border-white/30 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-800 placeholder-gray-500 form-input"
                     placeholder="Enter your full name"
+                    disabled={isSubmitting}
+                    inputMode="text"
                   />
+                  {errors.name && (
+                    <p className="text-red-500 text-sm mt-1">{errors.name}</p>
+                  )}
                 </div>
                 <div>
                   <label
@@ -330,9 +416,14 @@ export default function ContactPage() {
                     value={formData.email}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 backdrop-blur-lg bg-white/20 border border-white/30 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-800 placeholder-gray-500"
+                    className="w-full px-4 py-3 backdrop-blur-lg bg-white/20 border border-white/30 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-800 placeholder-gray-500 form-input"
                     placeholder="Enter your email address"
+                    disabled={isSubmitting}
+                    inputMode="email"
                   />
+                  {errors.email && (
+                    <p className="text-red-500 text-sm mt-1">{errors.email}</p>
+                  )}
                 </div>
               </div>
 
@@ -350,8 +441,10 @@ export default function ContactPage() {
                     name="phone"
                     value={formData.phone}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 backdrop-blur-lg bg-white/20 border border-white/30 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-800 placeholder-gray-500"
+                    className="w-full px-4 py-3 backdrop-blur-lg bg-white/20 border border-white/30 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-800 placeholder-gray-500 form-input"
                     placeholder="Enter your phone number"
+                    disabled={isSubmitting}
+                    inputMode="tel"
                   />
                 </div>
                 <div>
@@ -367,7 +460,8 @@ export default function ContactPage() {
                       name="service"
                       value={formData.service}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 pr-8 backdrop-blur-lg bg-white/20 border border-white/30 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-800 appearance-none cursor-pointer"
+                      className="w-full px-4 py-3 pr-8 backdrop-blur-lg bg-white/20 border border-white/30 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-800 appearance-none cursor-pointer form-select"
+                      disabled={isSubmitting}
                     >
                       <option value="">Select a service</option>
                       <option value="study-abroad">
@@ -404,9 +498,13 @@ export default function ContactPage() {
                   required
                   maxLength={500}
                   rows={6}
-                  className="w-full px-4 py-3 backdrop-blur-lg bg-white/20 border border-white/30 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-800 placeholder-gray-500 resize-none"
+                  className="w-full px-4 py-3 backdrop-blur-lg bg-white/20 border border-white/30 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-800 placeholder-gray-500 resize-none form-textarea"
                   placeholder="Tell us about your plans, questions, or how we can help you..."
+                  disabled={isSubmitting}
                 ></textarea>
+                {errors.message && (
+                  <p className="text-red-500 text-sm mt-1">{errors.message}</p>
+                )}
                 <div className="text-right text-sm text-gray-500 mt-1">
                   {formData.message.length}/500 characters
                 </div>
@@ -422,19 +520,21 @@ export default function ContactPage() {
                 </div>
               )}
 
+              {submitStatus === "error" && (
+                <div className="backdrop-blur-lg bg-red-100/50 border border-red-200 rounded-xl p-4 text-center">
+                  <i className="ri-error-warning-line text-2xl text-red-600 mb-2"></i>
+                  <p className="text-red-700 font-medium">
+                    Sorry! There was an error sending your message. Please try
+                    again or contact us directly.
+                  </p>
+                </div>
+              )}
+
               <div className="text-center">
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="relative overflow-hidden px-8 py-4
-      bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600
-      text-white font-semibold rounded-full
-      transition-all duration-300
-      shadow-lg hover:shadow-2xl
-      cursor-pointer whitespace-nowrap
-      transform hover:scale-110 active:scale-95
-      disabled:opacity-50 disabled:cursor-not-allowed
-      animate-bounce-slow group"
+                  className="relative overflow-hidden px-8 py-4 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white font-semibold rounded-full transition-all duration-300 shadow-lg hover:shadow-2xl cursor-pointer whitespace-nowrap transform hover:scale-110 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed animate-bounce-slow group form-button"
                 >
                   {/* shiny sweep animation */}
                   <span className="absolute top-0 left-[-150%] w-[50%] h-full bg-white/30 skew-x-[-20deg] animate-shine"></span>
