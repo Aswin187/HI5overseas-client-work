@@ -108,7 +108,7 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section className="pt-32 pb-20 min-h-screen flex items-center justify-center relative">
+      <section className="pt-32 pb-20 min-h-screen flex items-center justify-center relative bg-gradient-to-r from-[#a5fafa]/30 to-blue-200/30">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left Content */}
@@ -134,23 +134,28 @@ export default function Home() {
                 </h2>
 
                 <p className="text-lg text-black-700 mb-8 leading-relaxed font-inter">
-                  Dreaming of studying in Germany, or working in Canada or
-                  Europe? You are in the ideal spot. Hi5Overseas is here to help
-                  students and job seekers like yourself move forward offering
-                  professional advice, customized assistance, and dedicated
-                  attention.
+                  Dreaming of studying in{" "}
+                  <span className="font-bold">Germany</span> or working in
+                  <span className="font-bold"> Canada</span> or{" "}
+                  <span className="font-bold">Europe</span> ? You are in the
+                  ideal spot. We here to help students and job seekers like
+                  yourself move forward offering{" "}
+                  <span className="font-bold">
+                    Professional Advice, Customized Assistance, and Dedicated
+                    Attention.
+                  </span>
                 </p>
                 <p className="text-lg text-black-700 mb-8 leading-relaxed font-inter">
-                  We support you throughout, from identifying the ideal
-                  university or workplace to obtaining a visa and settling in a
-                  new country. At Hi5Overseas, it's more than relocating it's
-                  about shaping personal achievements that last.
+                  We support you throughout from identifying the ideal
+                  University or Workplace to obtaining a visa and settling in a
+                  new country. We believe relocation is more than just moving
+                  it’ s about creating lasting personal achievements
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Link
                     href="/services"
-                    className="relative px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-700 text-white font-semibold rounded-full shadow-lg cursor-pointer whitespace-nowrap transition-transform duration-500 hover:scale-110 hover:rotate-1 overflow-hidden"
+                    className="relative px-8 py-4 bg-gradient-to-r from-[#46EBEB] to-blue-400 text-white font-semibold rounded-full shadow-lg cursor-pointer whitespace-nowrap transition-transform duration-500 hover:scale-110 hover:rotate-1 overflow-hidden"
                   >
                     <span className="relative z-10">Explore Our Services</span>
                     <span className="absolute inset-0 rounded-full border-2 border-black-400 animate-[neonPulse_2s_infinite]"></span>
@@ -158,7 +163,7 @@ export default function Home() {
 
                   <Link
                     href="/contact"
-                    className="relative px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-700 text-white font-semibold rounded-full shadow-lg cursor-pointer whitespace-nowrap transition-transform duration-500 hover:scale-110 hover:rotate-1 overflow-hidden"
+                    className="relative px-8 py-4 bg-gradient-to-r from-[#46EBEB] to-blue-400 text-white font-semibold rounded-full shadow-lg cursor-pointer whitespace-nowrap transition-transform duration-500 hover:scale-110 hover:rotate-1 overflow-hidden"
                   >
                     <span className="relative z-10">Start Your Journey</span>
                     <span className="absolute inset-0 rounded-full border-2 border-black-400 animate-[neonPulse_2s_infinite]"></span>
@@ -195,7 +200,7 @@ export default function Home() {
                   p-4 border border-gray/60 shadow-lg
                   animate-rotate-slow"
                 >
-                  <i className="ri-graduation-cap-line text-3xl text-blue-600 animate-pulse-glow"></i>
+                  <i className="ri-graduation-cap-line text-3xl bg-gradient-to-r from-[#46EBEB] to-blue-500 bg-clip-text text-transparent animate-pulse-glow"></i>
                 </div>
               </div>
             </div>
@@ -222,7 +227,7 @@ export default function Home() {
                 p-4 border border-gray/60 shadow-lg
                 animate-rotate-slow"
               >
-                <i className="ri-graduation-cap-line text-3xl text-blue-600 animate-pulse-glow"></i>
+                <i className="ri-graduation-cap-line text-3xl bg-gradient-to-r from-[#46EBEB] to-blue-500 bg-clip-text text-transparent animate-pulse-glow"></i>
               </div>
             </div>
 
@@ -234,15 +239,15 @@ export default function Home() {
               <h2 className="text-3xl md:text-4xl font-bold text-black-700 mb-6 leading-tight font-poppins">
                 Want to Study Abroad?
                 <span className="block text-blue-600">
-                  We'll Make It Happen
+                  We Will Make It Happen
                 </span>
               </h2>
 
               <p className="text-lg text-black-700 mb-8 leading-relaxed font-inter">
-                Every student has a different dream—and we get that. Whether
-                you're planning to study engineering, design, business, or arts,
-                we help you choose the right course and country based on what
-                you want, not just what's trending.
+                Every student has a different dream and we get that. Whether you
+                are planning to study Engineering, Design, Business, or Arts, We
+                help you choose the right course and country based on what you
+                want not just what's trending.
               </p>
 
               {/* Destinations */}
@@ -277,15 +282,15 @@ export default function Home() {
                   How We Can Assist You:
                 </h3>
                 {[
-                  "Finding the right universities & courses",
-                  "SOPs, LORs, resumes – we help you write them the right way",
+                  "Finding the right Universities & Courses",
+                  "SOPs, LORs, resumes we help you write them the right way",
                   "Visa application support",
                   "IELTS & language training",
-                  "Pre-departure briefings – so you know what to expect",
+                  "Pre-departure briefings so you know what to expect",
                 ].map((service, index) => (
                   <div
                     key={index}
-                    className="flex items-center space-x-3 text-black-700 animate-bounce-card"
+                    className="flex items-center space-x-3 text-black-700 font-bold animate-bounce-card"
                     style={{ animationDelay: `${index * 0.2}s` }} // delay for staggered effect
                   >
                     <div className="w-2 h-2 bg-blue-400 rounded-full animate-glow"></div>
@@ -305,21 +310,21 @@ export default function Home() {
             {/* Left - Content */}
             <div className="backdrop-blur-lg bg-white/10 rounded-3xl p-8 border border-white/20 shadow-xl">
               <h2 className="text-3xl md:text-4xl font-bold text-black-700 mb-6 leading-tight font-poppins">
-                Looking to Work Abroad?
-                <span className="block text-blue-600">Let's Get You There</span>
+                Looking to Work Abroad ?
               </h2>
               <p className="text-lg text-black-700 mb-8 leading-relaxed font-inter">
-                If you are planning to build your career overseas, we’re here to
-                support you every step of the way. From skilled and unskilled
-                opportunities in Europe to exciting hospitality roles in the
-                Maldives, we ll guide you to apply confidently and through the
-                right legal channels..
+                If you are planning to build your career. We are here to support
+                you every step of the way. From Skilled and Unskilled
+                Opportunities in <span className="font-bold">Europe</span> to
+                exciting hospitality roles in the
+                <span className="font-bold"> Maldives</span> we will guide you
+                to apply confidently and through the right legal channels..
               </p>
 
               {/* Work Destinations - Updated with Cards */}
               <div className="mb-8">
-                <h3 className="text-xl font-semibold text-blue-400 mb-6 font-serif italic">
-                  Countries We Work With:
+                <h3 className="text-xl font-bold text-blue-400 mb-6 font-serif italic">
+                  Our Global Presence
                 </h3>
                 <div className="grid md:grid-cols-2 gap-4">
                   {/* Singapore */}
@@ -338,7 +343,7 @@ export default function Home() {
                       </div>
                     </div>
                     <div className="p-4">
-                      <h4 className="font-bold text-black-700 text-lg font-serif italic">
+                      <h4 className="font-bold text-black-700 text-lg uppercase">
                         Singapore
                       </h4>
                       <p className="text-sm text-black-700 mt-1 font-serif italic">
@@ -363,7 +368,7 @@ export default function Home() {
                       </div>
                     </div>
                     <div className="p-4">
-                      <h4 className="font-bold text-black-700 text-lg font-serif italic">
+                      <h4 className="font-bold text-black-700 text-lg uppercase">
                         Europe
                       </h4>
                       <p className="text-sm text-black-700 mt-1 font-serif italic">
@@ -388,7 +393,7 @@ export default function Home() {
                       </div>
                     </div>
                     <div className="p-4">
-                      <h4 className="font-bold text-black-700 text-lg font-serif italic">
+                      <h4 className="font-bold text-black-700 text-lg uppercase">
                         Australia & Canada
                       </h4>
                       <p className="text-sm text-black-700 mt-1 font-serif italic">
@@ -413,7 +418,7 @@ export default function Home() {
                       </div>
                     </div>
                     <div className="p-4">
-                      <h4 className="font-bold text-black-700 text-lg font-serif italic">
+                      <h4 className="font-bold text-black-700 text-lg uppercase">
                         GCC Countries
                       </h4>
                       <p className="text-sm text-black-700 mt-1 font-serif italic">
@@ -438,7 +443,7 @@ export default function Home() {
                       </div>
                     </div>
                     <div className="p-4">
-                      <h4 className="font-bold text-black-700 text-lg font-serif italic">
+                      <h4 className="font-bold text-black-700 text-lg uppercase">
                         Malaysia & Maldives
                       </h4>
                       <p className="text-sm text-black-700 mt-1 font-serif italic">
@@ -464,7 +469,7 @@ export default function Home() {
                 ].map((service, index) => (
                   <div
                     key={index}
-                    className="flex items-center space-x-3 text-black-700"
+                    className="flex items-center space-x-3  font-bold text-black-700"
                   >
                     <div className="w-2 h-2 bg-blue-400 rounded-full animate-glow"></div>
                     <span>{service}</span>
@@ -501,7 +506,7 @@ export default function Home() {
                   p-4 border border-gray/60 shadow-lg
                   animate-rotate-slow"
                 >
-                  <i className="ri-briefcase-line text-3xl text-blue-600 animate-pulse-glow"></i>
+                  <i className="ri-briefcase-line text-3xl bg-gradient-to-r from-[#46EBEB] to-blue-500 bg-clip-text text-transparent animate-pulse-glow"></i>
                 </div>
               </div>
             </div>
@@ -514,7 +519,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6 text-center">
           <div className="backdrop-blur-lg bg-white/20 rounded-3xl p-12 border border-gray/60 shadow-2xl">
             <h2 className="text-3xl md:text-4xl font-bold text-black-700 mb-6 leading-tight font-poppins">
-              Why Choose Hi5Overseas?
+              Why Choose Us?
             </h2>
             <div className="grid md:grid-cols-3 gap-8">
               {/* Card 1 */}
@@ -527,14 +532,14 @@ export default function Home() {
                 <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-blue-400/20 to-purple-400/20 opacity-0 group-hover:opacity-100 transition duration-500"></div>
 
                 <div className="relative">
-                  <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:scale-110 transition-transform duration-500">
+                  <div className="w-16 h-16 bg-gradient-to-r from-[#46EBEB] to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:scale-110 transition-transform duration-500">
                     <i className="ri-heart-line text-2xl text-white"></i>
                   </div>
                   <h3 className="font-bold text-black-700 text-2xl font-serif italic">
                     Real Advice
                   </h3>
                   <p className="text-lg text-black-700 mb-8 leading-relaxed font-inter">
-                    We believe in real advice, not copy-paste solutions. You'll
+                    We believe in real advice not copy-paste solutions. You will
                     have a dedicated expert guiding you every step of the way.
                   </p>
                 </div>
@@ -550,7 +555,7 @@ export default function Home() {
                 <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-green-400/20 to-blue-400/20 opacity-0 group-hover:opacity-100 transition duration-500"></div>
 
                 <div className="relative">
-                  <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:scale-110 transition-transform duration-500">
+                  <div className="w-16 h-16 bg-gradient-to-r from-[#46EBEB] to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:scale-110 transition-transform duration-500">
                     <i className="ri-shield-check-line text-2xl text-white"></i>
                   </div>
                   <h3 className="font-bold text-black-700 text-2xl font-serif italic">
@@ -573,14 +578,14 @@ export default function Home() {
                 <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-purple-400/20 to-pink-400/20 opacity-0 group-hover:opacity-100 transition duration-500"></div>
 
                 <div className="relative">
-                  <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:scale-110 transition-transform duration-500">
+                  <div className="w-16 h-16 bg-gradient-to-r from-[#46EBEB] to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:scale-110 transition-transform duration-500">
                     <i className="ri-trophy-line text-2xl text-white"></i>
                   </div>
                   <h3 className="font-bold text-black-700 text-2xl font-serif italic">
                     Success Stories
                   </h3>
                   <p className="text-lg text-black-700 mb-8 leading-relaxed font-inter">
-                    For us, it's not just about sending people abroad it's about
+                    For us it's not just about sending people abroad it's about
                     building success stories.
                   </p>
                 </div>
@@ -596,11 +601,11 @@ export default function Home() {
           <div className="text-center mb-16">
             <div className="backdrop-blur-lg bg-white/10 rounded-3xl p-8 border border-white/20 shadow-xl inline-block">
               <h2 className="text-3xl md:text-4xl font-bold text-black-700 mb-6 leading-tight font-poppins">
-                Why People Choose Hi5Overseas
+                Why People Choose Us
               </h2>
               <p className="text-lg text-black-700 mb-8 leading-relaxed font-inter">
                 We know how confusing and stressful this process can be. That's
-                why we keep things clear, simple, and fully transparent. No
+                why we keep things clear, simple and fully transparent. No
                 hidden fees. No complicated terms. Just expert help you can
                 count on.
               </p>
@@ -611,7 +616,7 @@ export default function Home() {
           <div className="mb-20">
             <div className="backdrop-blur-lg bg-gray/80 rounded-3xl p-8 border border-gray/20 shadow-xl">
               <h3 className="text-4xl font-bold text-black-700 mb-6 leading-tight font-poppins text-center">
-                Here's What You Get with Us:
+                What We Offer:
               </h3>
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                 {/* Card 1 */}
@@ -622,7 +627,7 @@ export default function Home() {
                   animate-fade-in-up"
                 >
                   <div
-                    className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full 
+                    className="w-12 h-12 bg-gradient-to-r from-[#46EBEB] to-blue-500 rounded-full 
                     flex items-center justify-center mx-auto mb-4 
                     animate-bounce-slow"
                   >
@@ -641,7 +646,7 @@ export default function Home() {
                   animate-fade-in-up delay-200"
                 >
                   <div
-                    className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full 
+                    className="w-12 h-12 bg-gradient-to-r from-[#46EBEB] to-blue-500 rounded-full 
                     flex items-center justify-center mx-auto mb-4 
                     animate-bounce-slow"
                   >
@@ -660,14 +665,14 @@ export default function Home() {
                   animate-fade-in-up delay-400"
                 >
                   <div
-                    className="w-12 h-12 bg-gradient-to-r from-green-500 to-teal-500 rounded-full 
+                    className="w-12 h-12 bg-gradient-to-r from-[#46EBEB] to-blue-500 rounded-full 
                     flex items-center justify-center mx-auto mb-4 
                     animate-bounce-slow"
                   >
                     <i className="ri-notification-3-line text-xl text-white"></i>
                   </div>
                   <p className="text-gray-800 font-semibold">
-                    Real time updates and quick responses
+                    Real time Updates and Quick Responses
                   </p>
                 </div>
 
@@ -679,14 +684,14 @@ export default function Home() {
                   animate-fade-in-up delay-600"
                 >
                   <div
-                    className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-full 
+                    className="w-12 h-12 bg-gradient-to-r from-[#46EBEB] to-blue-500 rounded-full 
                     flex items-center justify-center mx-auto mb-4 
                     animate-bounce-slow"
                   >
                     <i className="ri-route-line text-xl text-white"></i>
                   </div>
                   <p className="text-gray-800 font-semibold">
-                    A smooth, step-by-step process
+                    A smooth step-by-step process
                   </p>
                 </div>
               </div>
@@ -710,7 +715,7 @@ export default function Home() {
           <div className="text-center mb-16">
             <div className="backdrop-blur-lg bg-white/10 rounded-3xl p-8 border border-white/20 shadow-xl inline-block">
               <h2 className="text-3xl md:text-4xl font-bold text-black-700 mb-6 leading-tight font-poppins">
-                Hear from Some of Our Clients
+                Our Happy Clients
               </h2>
             </div>
           </div>
@@ -719,12 +724,16 @@ export default function Home() {
             {/* Testimonial 1 */}
             <div className="backdrop-blur-lg bg-white/20 rounded-3xl p-8 border border-gray/60  shadow-xl hover:scale-105 transition-all duration-300">
               <div className="flex items-center mb-6">
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mr-4">
+                <div className="w-16 h-16 bg-gradient-to-r from-[#46EBEB] to-blue-500 rounded-full flex items-center justify-center mr-4">
                   <span className="text-white font-bold text-lg">PR</span>
                 </div>
                 <div>
-                  <h4 className="font-bold text-black-700">Supriya Raajan</h4>
-                  <p className="text-blue-600 font-medium">Singapore</p>
+                  <h4 className="font-bold text-black-700">
+                    PREM KUMAR RANA SWAMY
+                  </h4>
+                  <p className="text-blue-600 font-medium uppercase">
+                    Singapore
+                  </p>
                   <p className="text-sm text-black-700">
                     Diploma in Logistics and Supply Chain
                   </p>
@@ -740,22 +749,24 @@ export default function Home() {
                 </div>
               </div>
               <p className="text-lg text-black-700 mb-8 leading-relaxed font-inter">
-                I'm grateful to Hi5 Overseas for their support in my journey.
+                I'm grateful to Hi5Overseas for their support in my journey.
                 Completing my Diploma in Logistics and Supply Chain has opened
-                new career opportunities in Singapore, and their guidance made
-                the process smooth and easy
+                new career opportunities in Singapore and their guidance made
+                the process smooth and easy.
               </p>
             </div>
 
             {/* Testimonial 2 */}
             <div className="backdrop-blur-lg bg-white/20 rounded-3xl p-8 border border-gray/60  shadow-xl hover:scale-105 transition-all duration-300">
               <div className="flex items-center mb-6">
-                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mr-4">
+                <div className="w-16 h-16 bg-gradient-to-r from-[#46EBEB] to-blue-500 rounded-full flex items-center justify-center mr-4">
                   <span className="text-white font-bold text-lg">K</span>
                 </div>
                 <div>
-                  <h4 className="font-bold text-black-700">Karthik</h4>
-                  <p className="text-blue-400 font-medium">Maldives</p>
+                  <h4 className="font-bold text-black-700">KARUNYA</h4>
+                  <p className="text-blue-600 font-medium uppercase">
+                    Maldives
+                  </p>
                   <p className="text-sm text-black-700">
                     Placed in an Accounts Job
                   </p>
@@ -773,20 +784,22 @@ export default function Home() {
               <p className="text-lg text-black-700 mb-8 leading-relaxed font-inter">
                 Landing an accounting job in the Maldives has been a dream come
                 true. Iam grateful for the professional guidance and support I
-                received, and I highly recommend their services for building an
-                international career
+                received and I highly recommend their services for building an
+                international career.
               </p>
             </div>
 
             {/* Testimonial 3 */}
             <div className="backdrop-blur-lg bg-white/20 rounded-3xl p-8 border border-gray/60  shadow-xl hover:scale-105 transition-all duration-300">
               <div className="flex items-center mb-6">
-                <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-teal-500 rounded-full flex items-center justify-center mr-4">
+                <div className="w-16 h-16 bg-gradient-to-r from-[#46EBEB] to-blue-500 rounded-full flex items-center justify-center mr-4">
                   <span className="text-white font-bold text-lg">MM</span>
                 </div>
                 <div>
-                  <h4 className="font-bold text-black-700">Midhun Mohanan</h4>
-                  <p className="text-green-600 font-medium">Malaysia</p>
+                  <h4 className="font-bold text-black-700">MIDHUN MOHANAN</h4>
+                  <p className="text-blue-600 font-medium uppercase">
+                    Malaysia
+                  </p>
                   <p className="text-sm text-black-700">
                     Cashier at Restaurant
                   </p>
@@ -802,8 +815,8 @@ export default function Home() {
                 </div>
               </div>
               <p className="text-lg text-black-700 mb-8 leading-relaxed font-inter">
-                "Thanks to Hi5 Overseas, I am now working as a cashier in
-                Malaysia. Their support made the whole process smooth and easy."
+                Thanks to Hi5 Overseas, I am now working as a cashier in
+                Malaysia. Their support made the whole process smooth and easy.
               </p>
             </div>
           </div>
@@ -821,12 +834,12 @@ export default function Home() {
               It Deserves the Best Start.
             </p>
             <p className="text-lg text-black-700 font-bold mb-8">
-              Hi5Overseas Let's build your journey
+              Let's build your journey
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/contact"
-                className="relative px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-700 text-white font-semibold rounded-full shadow-lg cursor-pointer whitespace-nowrap transition-transform duration-500 hover:scale-110 hover:rotate-1 overflow-hidden"
+                className="relative px-8 py-4 bg-gradient-to-r from-[#46EBEB] to-blue-400 text-white font-semibold rounded-full shadow-lg cursor-pointer whitespace-nowrap transition-transform duration-500 hover:scale-110 hover:rotate-1 overflow-hidden"
               >
                 <span className="relative z-10"> Get Free Consultation</span>
 
@@ -835,7 +848,7 @@ export default function Home() {
               </Link>
               <Link
                 href="/about"
-                className="relative px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-700 text-white font-semibold rounded-full shadow-lg cursor-pointer whitespace-nowrap transition-transform duration-500 hover:scale-110 hover:rotate-1 overflow-hidden"
+                className="relative px-8 py-4 bg-gradient-to-r from-[#46EBEB] to-blue-400 text-white font-semibold rounded-full shadow-lg cursor-pointer whitespace-nowrap transition-transform duration-500 hover:scale-110 hover:rotate-1 overflow-hidden"
               >
                 <span className="relative z-10">Learn More About Us</span>
 

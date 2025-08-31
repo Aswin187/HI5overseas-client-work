@@ -217,7 +217,7 @@ export default function ContactPage() {
       </nav>
 
       {/* Hero Section */}
-      <section className="pt-32 pb-20 relative">
+      <section className="pt-32 pb-20 relative bg-gradient-to-r from-[#a5fafa]/30 to-blue-200/30">
         <div className="max-w-7xl mx-auto px-6">
           <div
             className={`text-center mb-16 transition-all duration-1000 ${
@@ -228,9 +228,9 @@ export default function ContactPage() {
           >
             <div className="backdrop-blur-lg bg-white/10 rounded-3xl p-8 border border-white/20 shadow-xl inline-block">
               <h1 className="text-4xl md:text-6xl font-bold text-black-700 mb-6 leading-tight font-poppins">
-                📞 Get in Touch
+                📞 Get In Touch
               </h1>
-              <p className="text-2xl md:text-3xl font-semibold text-blue-400 mb-6 font-serif italic">
+              <p className="text-2xl md:text-3xl font-semibold text-blue-600 mb-6 font-serif italic">
                 Ready to Start Your Journey?
               </p>
               <p className="text-lg text-black-700 mb-8 leading-relaxed font-inter">
@@ -255,7 +255,7 @@ export default function ContactPage() {
                   : "opacity-0 translate-y-10 rotate-6 scale-90"
               }`}
             >
-              <div className="w-20 h-20 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-6 animate-pulse">
+              <div className="w-20 h-20 bg-gradient-to-r from-[#46EBEB] to-blue-500 rounded-full flex items-center justify-center mx-auto mb-6 animate-pulse">
                 <i className="ri-map-pin-line text-3xl text-white"></i>
               </div>
               <h2 className="font-bold text-black-700 text-2xl font-serif italic">
@@ -290,7 +290,7 @@ export default function ContactPage() {
                   : "opacity-0 translate-y-10 rotate-6 scale-90"
               }`}
             >
-              <div className="w-20 h-20 bg-gradient-to-r from-green-500 to-teal-500 rounded-full flex items-center justify-center mx-auto mb-6 animate-bounce-slow">
+              <div className="w-20 h-20 bg-gradient-to-r from-[#46EBEB] to-blue-500 rounded-full flex items-center justify-center mx-auto mb-6 animate-bounce-slow">
                 <i className="ri-whatsapp-line text-3xl text-white"></i>
               </div>
               <h2 className="font-bold text-black-700 text-2xl font-serif italic">
@@ -324,7 +324,7 @@ export default function ContactPage() {
                   : "opacity-0 translate-y-10 rotate-6 scale-90"
               }`}
             >
-              <div className="w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-6 animate-pulse">
+              <div className="w-20 h-20 bg-gradient-to-r from-[#46EBEB] to-blue-500 rounded-full flex items-center justify-center mx-auto mb-6 animate-pulse">
                 <i className="ri-mail-line text-3xl text-white"></i>
               </div>
               <h2 className="font-bold text-black-700 text-2xl font-serif italic">
@@ -534,7 +534,7 @@ export default function ContactPage() {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="relative overflow-hidden px-8 py-4 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white font-semibold rounded-full transition-all duration-300 shadow-lg hover:shadow-2xl cursor-pointer whitespace-nowrap transform hover:scale-110 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed animate-bounce-slow group form-button"
+                  className="relative overflow-hidden px-8 py-4 bg-gradient-to-r from-[#46EBEB] to-blue-500 text-white font-bold rounded-full transition-all duration-300 shadow-lg hover:shadow-2xl cursor-pointer whitespace-nowrap transform hover:scale-110 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed animate-bounce-slow group form-button"
                 >
                   {/* shiny sweep animation */}
                   <span className="absolute top-0 left-[-150%] w-[50%] h-full bg-white/30 skew-x-[-20deg] animate-shine"></span>

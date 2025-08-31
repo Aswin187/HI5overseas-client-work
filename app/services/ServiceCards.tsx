@@ -125,15 +125,15 @@ export default function ServiceCards() {
                     ></i>
                   </div>
 
-                  <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-800 mb-2">
+                  <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-800 mb-2 uppercase">
                     {service.title}
                   </h3>
                   <p
-                    className={`text-base font-medium text-transparent bg-clip-text bg-gradient-to-r ${service.gradient} mb-3`}
+                    className={`text-base font-medium text-transparent bg-clip-text bg-gradient-to-r ${service.gradient} mb-3 uppercase`}
                   >
                     {service.subtitle}
                   </p>
-                  <p className="text-gray-600 mb-4 sm:mb-6 text-sm sm:text-base leading-relaxed">
+                  <p className="text-gray-600 mb-4 sm:mb-6 text-sm sm:text-base leading-relaxed font-semibold">
                     {service.description}
                   </p>
 
@@ -155,7 +155,7 @@ export default function ServiceCards() {
                         >
                           <i className="ri-check-line text-white text-xs sm:text-sm"></i>
                         </div>
-                        <span className="text-gray-700 text-sm sm:text-base">
+                        <span className="text-gray-700 text-sm sm:text-base font-bold">
                           {feature}
                         </span>
                       </div>

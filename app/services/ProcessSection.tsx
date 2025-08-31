@@ -36,7 +36,7 @@ export default function ProcessSection() {
       description:
         "We understand your goals, background, and preferences through a detailed consultation.",
       icon: "ri-chat-3-line",
-      gradient: "from-blue-500 to-cyan-500",
+      gradient: "bg-gradient-to-r from-[#46EBEB] to-blue-500",
     },
     {
       number: "02",
@@ -44,7 +44,7 @@ export default function ProcessSection() {
       description:
         "Create a customized roadmap tailored to your specific needs and aspirations.",
       icon: "ri-roadmap-line",
-      gradient: "from-purple-500 to-pink-500",
+      gradient: "bg-gradient-to-r from-[#46EBEB] to-blue-500",
     },
     {
       number: "03",
@@ -52,7 +52,7 @@ export default function ProcessSection() {
       description:
         "Guide you through applications, documentation, and submission processes.",
       icon: "ri-file-text-line",
-      gradient: "from-green-500 to-blue-500",
+      gradient: "bg-gradient-to-r from-[#46EBEB] to-blue-500",
     },
     {
       number: "04",
@@ -60,7 +60,7 @@ export default function ProcessSection() {
       description:
         "Handle all visa requirements and ensure your documentation is perfect.",
       icon: "ri-shield-check-line",
-      gradient: "from-orange-500 to-red-500",
+      gradient: "bg-gradient-to-r from-[#46EBEB] to-blue-500",
     },
     {
       number: "05",
@@ -68,7 +68,7 @@ export default function ProcessSection() {
       description:
         "Prepare you for your journey with comprehensive pre-departure guidance.",
       icon: "ri-flight-takeoff-line",
-      gradient: "from-indigo-500 to-purple-500",
+      gradient: "bg-gradient-to-r from-[#46EBEB] to-blue-500",
     },
   ];
 

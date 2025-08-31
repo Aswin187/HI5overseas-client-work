@@ -60,7 +60,7 @@ export default function FoundersSection() {
                     {founders.map((founder, i) => (
                         <div
                             key={i}
-                            className={`bg-white/40 backdrop-blur-xl border border-white/50 shadow-lg rounded-xl p-6 transform transition-all duration-1000 ${isVisible
+                            className={`bg-gradient-to-r from-[#a5fafa]/50 to-blue-200/50 shadow-lg rounded-xl p-6 transform transition-all duration-1000 ${isVisible
                                 ? 'opacity-100 translate-y-0'
                                 : 'opacity-0 translate-y-8'
                                 }`}
@@ -68,7 +68,7 @@ export default function FoundersSection() {
                             <h3 className="text-2xl font-bold text-gray-900">
                                 {founder.name}
                             </h3>
-                            <p className="text-blue-600 text-lg font-medium">
+                            <p className="text-black text-lg font-medium ">
                                 {founder.role}
                             </p>
                         </div>
@@ -81,8 +81,8 @@ export default function FoundersSection() {
                         }`}
                 >
                     <blockquote className="text-xl md:text-2xl font-semibold text-gray-800 italic">
-                        "We founded Hi5Overseas with a simple belief: every dream deserves
-                        expert guidance, genuine care, and unwavering support."
+                        "We founded with a simple belief: every dream deserves
+                        Expert Guidance, Genuine Care, and Unwavering Support."
                     </blockquote>
                 </div>
             </div>

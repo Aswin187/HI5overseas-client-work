@@ -30,34 +30,34 @@ export default function WhyTrustUs() {
       title: "Personalized Approach",
       description:
         "We listen, understand, and recommend what's best for you not what's easiest for us.",
-      gradient: "from-blue-500 to-cyan-500",
+      gradient: "bg-gradient-to-r from-[#46EBEB] to-blue-500",
     },
     {
       icon: "ri-global-line",
       title: "Global Network",
       description:
-        "We're connected with top universities and international employers across multiple countries.",
-      gradient: "from-purple-500 to-blue-500",
+        "We are connected with top universities and international employers across multiple countries.",
+      gradient: "bg-gradient-to-r from-[#46EBEB] to-blue-500",
     },
     {
       icon: "ri-file-text-line",
       title: "Clear & Transparent",
       description: "No false promises. Just honest guidance, step-by-step.",
-      gradient: "from-green-500 to-blue-500",
+      gradient: "bg-gradient-to-r from-[#46EBEB] to-blue-500",
     },
     {
       icon: "ri-compass-3-line",
       title: "Complete Guidance",
       description:
-        "From counseling and applications to visas and interview prep we're with you throughout.",
-      gradient: "from-orange-500 to-pink-500",
+        "From counseling and applications to visas and interview prep we are with you throughout.",
+      gradient: "bg-gradient-to-r from-[#46EBEB] to-blue-500",
     },
     {
       icon: "ri-hand-heart-line",
       title: "Human Touch",
       description:
-        "You're not just a client you're someone we want to see succeed and celebrate with.",
-      gradient: "from-pink-500 to-purple-500",
+        "You are not just a client you are someone we want to see succeed and celebrate with.",
+      gradient: "bg-gradient-to-r from-[#46EBEB] to-blue-500",
     },
   ];
 
@@ -108,16 +108,16 @@ export default function WhyTrustUs() {
 
                 <div className="relative z-10">
                   <div
-                    className={`w-16 h-16 bg-gradient-to-r ${
-                      feature.gradient
-                    } rounded-2xl flex items-center justify-center mb-6 transform transition-all duration-300 ${
-                      hoveredCard === index ? "rotate-12 scale-110" : ""
-                    }`}
+                    className={`w-16 h-16 bg-gradient-to-r from-[#46EBEB] to-blue-500 
+                      // feature.gradient
+                     rounded-2xl flex items-center justify-center mb-6 transform transition-all duration-300 ${
+                       hoveredCard === index ? "rotate-12 scale-110" : ""
+                     }`}
                   >
                     <i className={`${feature.icon} text-white text-2xl`}></i>
                   </div>
 
-                  <h3 className="font-bold text-black-700 text-lg font-serif italic">
+                  <h3 className="font-bold text-black-700 text-lg uppercase mb-4">
                     {feature.title}
                   </h3>
                   <p className="text-lg text-black-700 mb-8 leading-relaxed font-inter">

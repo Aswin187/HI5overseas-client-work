@@ -33,7 +33,7 @@ export default function ClosingSection() {
           backgroundImage: `url('https://readdy.ai/api/search-image?query=Inspiring%20graduation%20ceremony%20scene%20with%20diverse%20international%20students%20celebrating%20success%2C%20beautiful%20campus%20environment%20with%20flags%20from%20different%20countries%2C%20bright%20golden%20hour%20lighting%20creating%20warm%20atmosphere%2C%20professional%20education%20consulting%20theme%20with%20hope%20and%20achievement&width=1920&height=1080&seq=closing-bg&orientation=landscape')`,
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 via-purple-900/70 to-pink-900/60"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-[#a5fafa]/80 to-blue-200/70"></div>
       </div>
 
       <div className="relative z-10 max-w-4xl mx-auto text-center">
@@ -43,11 +43,11 @@ export default function ClosingSection() {
           }`}
         >
           {/* Main Message */}
-          <div className="backdrop-blur-xl bg-white/10 rounded-3xl p-12 border border-white/20 shadow-2xl mb-12">
-            <h2 className="text-4xl md:text-4xl font-bold text-white/90 mb-6 leading-tight font-poppins">
-              At Hi5Overseas, we don't just send you abroad.
+          <div className="backdrop-blur-xl bg-white/70 rounded-3xl p-12 border border-white/70 shadow-2xl mb-12">
+            <h2 className="text-4xl md:text-4xl font-bold text-black/90 mb-6 leading-tight font-poppins">
+              At Hi5Overseas we don't just send you abroad.
             </h2>
-            <p className="text-4xl md:text-2xl font-bold text-white/90 mb-6 leading-tight font-poppins">
+            <p className="text-4xl md:text-2xl font-bold text-black/90 mb-6 leading-tight font-poppins">
               We help you start a new chapter with clarity, care, and
               confidence.
             </p>
@@ -59,7 +59,7 @@ export default function ClosingSection() {
               }`}
             >
               <div className="inline-block">
-                <div className="text-lg text-white/80 mb-8 px-6 py-3 rounded-full backdrop-blur-lg bg-white/10 border border-white/20">
+                <div className="text-lg text-black/90 mb-8 px-6 py-3 rounded-full backdrop-blur-lg bg-white/10 border border-white/20">
                   Your success is our celebration 🎉
                 </div>
               </div>
@@ -75,7 +75,7 @@ export default function ClosingSection() {
             >
               <Link
                 href="/contact"
-                className="relative px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-700 text-white font-semibold rounded-full shadow-lg cursor-pointer whitespace-nowrap transition-transform duration-500 hover:scale-110 hover:rotate-1 overflow-hidden"
+                className="relative px-8 py-4 bg-gradient-to-r from-[#46EBEB] to-blue-500 text-white font-semibold rounded-full shadow-lg cursor-pointer whitespace-nowrap transition-transform duration-500 hover:scale-110 hover:rotate-1 overflow-hidden"
               >
                 <span className="relative z-10">Start Your Journey</span>
 
@@ -84,7 +84,7 @@ export default function ClosingSection() {
               </Link>
               <Link
                 href="/services"
-                className="relative px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-700 text-white font-semibold rounded-full shadow-lg cursor-pointer whitespace-nowrap transition-transform duration-500 hover:scale-110 hover:rotate-1 overflow-hidden"
+                className="relative px-8 py-4 bg-gradient-to-r from-[#46EBEB] to-blue-500 text-white font-semibold rounded-full shadow-lg cursor-pointer whitespace-nowrap transition-transform duration-500 hover:scale-110 hover:rotate-1 overflow-hidden"
               >
                 <span className="relative z-10">Explore Our Services</span>
 

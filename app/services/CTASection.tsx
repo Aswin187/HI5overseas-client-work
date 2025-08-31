@@ -33,7 +33,7 @@ export default function CTASection() {
           backgroundImage: `url('https://readdy.ai/api/search-image?query=Inspiring%20international%20education%20consultation%20scene%20with%20happy%20diverse%20students%20celebrating%20success%2C%20modern%20office%20environment%20with%20world%20map%20and%20university%20brochures%2C%20bright%20motivational%20atmosphere%20with%20professional%20consultants%20helping%20achieve%20global%20dreams%20and%20aspirations&width=1920&height=1080&seq=cta-services-bg&orientation=landscape')`,
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/85 via-purple-900/75 to-pink-900/65"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-[#a5fafa]/80 to-blue-200/70"></div>
       </div>
 
       <div className="relative z-10 max-w-4xl mx-auto text-center">
@@ -43,15 +43,15 @@ export default function CTASection() {
           }`}
         >
           {/* Main CTA */}
-          <div className="backdrop-blur-xl bg-white/10 rounded-3xl p-12 border border-white/20 shadow-2xl mb-12">
-            <h2 className="text-4xl md:text-4xl font-bold text-white/90 mb-6 leading-tight font-poppins">
+          <div className="backdrop-blur-xl bg-white/70 rounded-3xl p-12 border border-white/70 shadow-2xl mb-12">
+            <h2 className="text-4xl md:text-4xl font-bold text-blacj/90 mb-6 leading-tight font-poppins">
               Ready to Start Your
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
+              <span className="block text-transparent text-blue-500">
                 Global Journey
               </span>
             </h2>
 
-            <p className="text-lg text-white/90 mb-8 leading-relaxed font-inter">
+            <p className="text-lg text-black/90 mb-8 leading-relaxed font-inter">
               Don't let your dreams wait. Our expert team is ready to guide you
               through every step of your international education or career
               journey.
@@ -67,7 +67,7 @@ export default function CTASection() {
             >
               <Link
                 href="/contact"
-                className="relative px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-700 text-white font-semibold rounded-full shadow-lg cursor-pointer whitespace-nowrap transition-transform duration-500 hover:scale-110 hover:rotate-1 overflow-hidden"
+                className="relative px-8 py-4 bg-gradient-to-r from-[#46EBEB] to-blue-500 text-white font-semibold rounded-full shadow-lg cursor-pointer whitespace-nowrap transition-transform duration-500 hover:scale-110 hover:rotate-1 overflow-hidden"
               >
                 <span className="relative z-10">Get Free Consultation</span>
 
@@ -76,7 +76,7 @@ export default function CTASection() {
               </Link>
               <Link
                 href="/about"
-                className="relative px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-700 text-white font-semibold rounded-full shadow-lg cursor-pointer whitespace-nowrap transition-transform duration-500 hover:scale-110 hover:rotate-1 overflow-hidden"
+                className="relative px-8 py-4 bg-gradient-to-r from-[#46EBEB] to-blue-500 text-white font-semibold rounded-full shadow-lg cursor-pointer whitespace-nowrap transition-transform duration-500 hover:scale-110 hover:rotate-1 overflow-hidden"
               >
                 <span className="relative z-10">Learn More About Us</span>
 
@@ -96,19 +96,21 @@ export default function CTASection() {
               <div className="flex flex-wrap justify-center items-center gap-8 text-white/80">
                 <div className="flex items-center space-x-2">
                   <i className="ri-shield-check-line text-green-400 text-xl"></i>
-                  <span className="text-sm font-medium">
+                  <span className="text-sm font-medium text-black">
                     Trusted by 1000+ Students
                   </span>
                 </div>
                 <div className="flex items-center space-x-2">
                   <i className="ri-time-line text-blue-400 text-xl"></i>
-                  <span className="text-sm font-medium">
+                  <span className="text-sm font-medium text-black">
                     5+ Years Experience
                   </span>
                 </div>
                 <div className="flex items-center space-x-2">
                   <i className="ri-global-line text-purple-400 text-xl"></i>
-                  <span className="text-sm font-medium">10+ Countries</span>
+                  <span className="text-sm font-medium text-black">
+                    10+ Countries
+                  </span>
                 </div>
               </div>
             </div>

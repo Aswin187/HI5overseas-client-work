@@ -105,9 +105,9 @@ export default function ServicesSection() {
           <h2 className="text-4xl md:text-6xl font-bold text-gray-800 mb-6 leading-tight font-poppins">
             What We Do
           </h2>
-          <p className="text-lg text-gray-600 mb-8 leading-relaxed font-inter">
-            We specialize in study abroad consulting, overseas job assistance,
-            and career guidance.
+          <p className="text-lg text-gray-600 font-semibold mb-8 leading-relaxed font-inter">
+            We specialize in Study Abroad Consulting, Overseas Job Assistance,
+            and Career Guidance.
           </p>
         </div>
 
@@ -118,14 +118,14 @@ export default function ServicesSection() {
           }`}
         >
           <div className="text-center mb-8">
-            <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
+            <div className="w-16 h-16 bg-gradient-to-r from-[#46EBEB] to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
               <i className="ri-book-open-line text-white text-2xl"></i>
             </div>
-            <h3 className="text-4xl font-semibold text-blue-400 mb-6 font-serif italic">
+            <h3 className="text-4xl font-semibold text-blue-600 mb-6 font-serif italic">
               Study Abroad Consulting
             </h3>
             <p className="text-lg text-gray-700 font-bold mb-8 leading-relaxed font-inter">
-              Top destinations for world-class education.
+              Top Destinations for World Class Education.
             </p>
           </div>
 
@@ -133,7 +133,7 @@ export default function ServicesSection() {
             {studyDestinations.map((d) => (
               <div
                 key={d.country}
-                className="font-bold text-gray-800 text-lg font-serif italic"
+                className="font-bold text-gray-800 text-lg uppercase"
               >
                 <div className="relative h-40 sm:h-48 min-h-[160px] rounded-lg overflow-hidden">
                   <img
@@ -161,14 +161,14 @@ export default function ServicesSection() {
           }`}
         >
           <div className="text-center mb-8">
-            <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
+            <div className="w-16 h-16 bg-gradient-to-r from-[#46EBEB] to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
               <i className="ri-briefcase-line text-white text-2xl"></i>
             </div>
-            <h3 className="text-4xl font-semibold text-blue-400 mb-6 font-serif italic">
+            <h3 className="text-4xl font-semibold text-blue-600 mb-6 font-serif italic">
               Overseas Job Assistance
             </h3>
             <p className="text-lg text-gray-700 font-bold mb-8 leading-relaxed font-inter">
-              Helping professionals find global career opportunities.
+              Helping Professionals Find Global Career Opportunities.
             </p>
           </div>
 
@@ -176,7 +176,7 @@ export default function ServicesSection() {
             {jobDestinations.map((d) => (
               <div
                 key={d.country}
-                className="font-bold text-gray-800 text-lg font-serif italic"
+                className="font-bold text-gray-800 text-lg  uppercase"
               >
                 <div className="relative h-36 sm:h-40 min-h-[140px] rounded-lg overflow-hidden">
                   <img
@@ -205,7 +205,7 @@ export default function ServicesSection() {
         >
           <div className="bg-gradient-to-r from-blue-50 to-purple-50 backdrop-blur-md rounded-2xl p-6 md:p-10 border border-gray-200 shadow">
             <p className="text-lg text-gray-700 font-semibold mb-8 leading-relaxed font-inter">
-              Whether you're planning to study or work abroad, we're here to
+              Whether you are planning to Study or Work Abroad. We are here to
               help you reach your destination with confidence and support.
             </p>
           </div>

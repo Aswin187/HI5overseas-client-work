@@ -69,11 +69,11 @@ export default function MissionVision() {
             }`}
           >
             <div className="backdrop-blur-xl bg-white/20 rounded-3xl p-10 border border-white/30 shadow-2xl hover:shadow-3xl transition-all duration-500 h-full group hover:scale-105">
-              <div className="w-20 h-20 bg-gradient-to-r from-blue-500 to-purple-500 rounded-3xl flex items-center justify-center mb-8 group-hover:rotate-12 transition-transform duration-500">
+              <div className="w-20 h-20 bg-gradient-to-r from-[#46EBEB] to-blue-500 rounded-3xl flex items-center justify-center mb-8 group-hover:rotate-12 transition-transform duration-500">
                 <i className="ri-rocket-line text-white text-3xl"></i>
               </div>
 
-              <h3 className="font-bold text-black-700 text-2xl font-serif italic">
+              <h3 className="font-bold text-black-700 text-2xl uppercase mb-4">
                 Our Mission
               </h3>
               <p className="text-lg text-black-700 mb-8 leading-relaxed font-inter">
@@ -85,7 +85,7 @@ export default function MissionVision() {
               <div className="mt-8">
                 <div className="h-1 bg-gray-200 rounded-full overflow-hidden">
                   <div
-                    className={`h-full bg-gradient-to-r from-blue-500 to-purple-500 rounded-full transition-all duration-2000 delay-500 ${
+                    className={`h-full bg-gradient-to-r from-[#46EBEB] to-blue-500 rounded-full transition-all duration-2000 delay-500 ${
                       isVisible ? "w-full" : "w-0"
                     }`}
                   ></div>
@@ -107,11 +107,11 @@ export default function MissionVision() {
             }`}
           >
             <div className="backdrop-blur-xl bg-white/20 rounded-3xl p-10 border border-white/30 shadow-2xl hover:shadow-3xl transition-all duration-500 h-full group hover:scale-105">
-              <div className="w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-500 rounded-3xl flex items-center justify-center mb-8 group-hover:rotate-12 transition-transform duration-500">
+              <div className="w-20 h-20 bg-gradient-to-r from-[#46EBEB] to-blue-500 rounded-3xl flex items-center justify-center mb-8 group-hover:rotate-12 transition-transform duration-500">
                 <i className="ri-eye-line text-white text-3xl"></i>
               </div>
 
-              <h3 className="font-bold text-black-700 text-2xl font-serif italic">
+              <h3 className="font-bold text-black-700 text-2xl uppercase mb-4">
                 Our Vision
               </h3>
               <p className="text-lg text-black-700 mb-8 leading-relaxed font-inter">
@@ -124,7 +124,7 @@ export default function MissionVision() {
               <div className="mt-8">
                 <div className="h-1 bg-gray-200 rounded-full overflow-hidden">
                   <div
-                    className={`h-full bg-gradient-to-r from-purple-500 to-pink-500 rounded-full transition-all duration-2000 delay-800 ${
+                    className={`h-full bg-gradient-to-r from-[#46EBEB] to-blue-500 rounded-full transition-all duration-2000 delay-800 ${
                       isVisible ? "w-full" : "w-0"
                     }`}
                   ></div>

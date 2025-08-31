@@ -96,8 +96,8 @@ export default function ValuesSection() {
           <div className="relative">
             {/* Central Hub */}
             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
-              <div className="w-32 h-32 backdrop-blur-xl bg-white/30 rounded-full border border-white/40 shadow-2xl flex items-center justify-center">
-                <div className="text-lg font-semibold text-blue-400 mb-6 font-serif italic">
+              <div className="w-32 h-32 backdrop-blur-xl bg-gradient-to-r from-[#46EBEB] to-blue-500 rounded-full border border-white/40 shadow-2xl flex items-center justify-center">
+                <div className="text-lg font-bold text-white mb-6 font-serif italic text-center">
                   VALUES
                 </div>
               </div>
@@ -106,7 +106,7 @@ export default function ValuesSection() {
             {/* Value Cards in Circle */}
             <div className="relative w-full h-96">
               {values.map((value, index) => {
-                const angle = index * 72 - 90; // 360/5 = 72 degrees between each
+                const angle = index * 72 - 90;
                 const radius = 180;
                 const x = Math.cos((angle * Math.PI) / 180) * radius;
                 const y = Math.sin((angle * Math.PI) / 180) * radius;
@@ -137,15 +137,15 @@ export default function ValuesSection() {
                       }`}
                     >
                       <div
-                        className={`w-12 h-12 bg-gradient-to-r ${
-                          value.gradient
-                        } rounded-xl flex items-center justify-center mb-3 ${
-                          activeValue === index ? "animate-pulse" : ""
-                        }`}
+                        className={`w-12 h-12 bg-gradient-to-r from-[#46EBEB] to-blue-500
+                        
+                         rounded-xl flex items-center justify-center mb-3 ${
+                           activeValue === index ? "animate-pulse" : ""
+                         }`}
                       >
                         <i className={`${value.icon} text-white text-xl`}></i>
                       </div>
-                      <h3 className="font-bold text-black-700 text-lg font-serif italic">
+                      <h3 className="font-bold text-black-700 text-lg uppercase mb-1">
                         {value.title}
                       </h3>
                       <p className="text-sm text-black-700 mt-1 font-serif itali">
@@ -179,11 +179,8 @@ export default function ValuesSection() {
                     y1="0"
                     x2={x}
                     y2={y}
-                    stroke={activeValue === index ? "#3B82F6" : "#E5E7EB"}
-                    strokeWidth={activeValue === index ? "3" : "1"}
-                    strokeOpacity={activeValue === index ? "0.8" : "0.3"}
-                    className="transition-all duration-500"
-                    transform="translate(50%, 50%)"
+                    stroke="url(#grad1)"
+                    strokeWidth="2"
                   />
                 );
               })}
@@ -206,9 +203,7 @@ export default function ValuesSection() {
             >
               <div className="backdrop-blur-xl bg-white/20 rounded-2xl p-6 border border-white/30 shadow-xl hover:shadow-2xl transition-all duration-500">
                 <div className="flex items-center space-x-4">
-                  <div
-                    className={`w-16 h-16 bg-gradient-to-r ${value.gradient} rounded-2xl flex items-center justify-center`}
-                  >
+                  <div className="w-16 h-16 bg-gradient-to-r from-[#46EBEB] to-blue-500 rounded-2xl flex items-center justify-center">
                     <i className={`${value.icon} text-white text-2xl`}></i>
                   </div>
                   <div>
