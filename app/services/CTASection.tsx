@@ -44,11 +44,9 @@ export default function CTASection() {
         >
           {/* Main CTA */}
           <div className="backdrop-blur-xl bg-white/70 rounded-3xl p-12 border border-white/70 shadow-2xl mb-12">
-            <h2 className="text-4xl md:text-4xl font-bold text-blacj/90 mb-6 leading-tight font-poppins">
+            <h2 className="text-4xl md:text-4xl font-bold text-black/90 mb-6 leading-tight font-poppins">
               Ready to Start Your
-              <span className="block text-transparent text-blue-500">
-                Global Journey
-              </span>
+              <span className="block text-blue-500">Global Journey</span>
             </h2>
 
             <p className="text-lg text-black/90 mb-8 leading-relaxed font-inter">

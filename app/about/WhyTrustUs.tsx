@@ -56,7 +56,7 @@ export default function WhyTrustUs() {
       icon: "ri-hand-heart-line",
       title: "Human Touch",
       description:
-        "You are not just a client you are someone we want to see succeed and celebrate with.",
+        "You're more than just a client — you're a partner, and we're committed to supporting and celebrating your success.",
       gradient: "bg-gradient-to-r from-[#46EBEB] to-blue-500",
     },
   ];

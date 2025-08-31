@@ -22,15 +22,12 @@ export default function ContactPage() {
     email: "",
     message: "",
   });
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);
-
     // Check if on mobile
-    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-    if (isMobile) {
-      console.log("Running on mobile device");
-    }
+    setIsMobile(/iPhone|iPad|iPod|Android/i.test(navigator.userAgent));
   }, []);
 
   const handleInputChange = (
@@ -70,7 +67,9 @@ export default function ContactPage() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Form submission started"); // Debug log
+
+    // Prevent multiple submissions
+    if (isSubmitting) return;
 
     if (!validateForm()) {
       setSubmitStatus("error");
@@ -81,16 +80,15 @@ export default function ContactPage() {
     setSubmitStatus("");
 
     try {
-      console.log("Sending request to API..."); // Debug log
-      const response = await fetch("/api/contact", {
+      // Use absolute URL for API route to avoid path issues on mobile
+      const baseUrl = window.location.origin;
+      const response = await fetch(`${baseUrl}/api/contact`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify(formData),
       });
-
-      console.log("Response status:", response.status); // Debug log
 
       if (!response.ok) {
         const errorData = await response.json().catch(() => ({}));
@@ -100,7 +98,7 @@ export default function ContactPage() {
       }
 
       const result = await response.json();
-      console.log("API response:", result); // Debug log
+      console.log("API response:", result);
 
       setIsSubmitting(false);
       setSubmitStatus("success");
@@ -116,7 +114,7 @@ export default function ContactPage() {
         setSubmitStatus("");
       }, 5000);
     } catch (error) {
-      console.error("Submission error:", error); // Detailed error log
+      console.error("Submission error:", error);
       setIsSubmitting(false);
       setSubmitStatus("error");
 
@@ -124,6 +122,13 @@ export default function ContactPage() {
         setSubmitStatus("");
       }, 5000);
     }
+  };
+
+  // WhatsApp message fallback for mobile users
+  const sendViaWhatsApp = () => {
+    const { name, email, phone, service, message } = formData;
+    const text = `Hi, I'm interested in your services.%0A%0AName: ${name}%0AEmail: ${email}%0APhone: ${phone}%0AService: ${service}%0AMessage: ${message}`;
+    window.open(`https://wa.me/919384818320?text=${text}`, "_blank");
   };
 
   return (
@@ -159,6 +164,13 @@ export default function ContactPage() {
         select,
         textarea {
           touch-action: manipulation;
+        }
+
+        /* Disable default iOS styles */
+        input,
+        textarea {
+          -webkit-appearance: none;
+          -webkit-border-radius: 0;
         }
       `}</style>
 
@@ -230,7 +242,7 @@ export default function ContactPage() {
               <h1 className="text-4xl md:text-6xl font-bold text-black-700 mb-6 leading-tight font-poppins">
                 📞 Get In Touch
               </h1>
-              <p className="text-2xl md:text-3xl font-semibold text-blue-600 mb-6 font-serif italic">
+              <p className="text-2xl md:text-3xl font-bold text-blue-600 mb-6 ">
                 Ready to Start Your Journey?
               </p>
               <p className="text-lg text-black-700 mb-8 leading-relaxed font-inter">
@@ -377,6 +389,7 @@ export default function ContactPage() {
               id="contact-form"
               onSubmit={handleSubmit}
               className="space-y-6"
+              noValidate
             >
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
@@ -525,8 +538,18 @@ export default function ContactPage() {
                   <i className="ri-error-warning-line text-2xl text-red-600 mb-2"></i>
                   <p className="text-red-700 font-medium">
                     Sorry! There was an error sending your message. Please try
-                    again or contact us directly.
+                    again or contact us directly at +91 9384818321.
                   </p>
+                  {isMobile && (
+                    <button
+                      type="button"
+                      onClick={sendViaWhatsApp}
+                      className="mt-4 px-6 py-3 bg-green-600 text-white font-medium rounded-full transition-all duration-300 hover:bg-green-700 flex items-center justify-center mx-auto"
+                    >
+                      <i className="ri-whatsapp-line mr-2"></i>
+                      Send via WhatsApp Instead
+                    </button>
+                  )}
                 </div>
               )}
 
@@ -535,6 +558,7 @@ export default function ContactPage() {
                   type="submit"
                   disabled={isSubmitting}
                   className="relative overflow-hidden px-8 py-4 bg-gradient-to-r from-[#46EBEB] to-blue-500 text-white font-bold rounded-full transition-all duration-300 shadow-lg hover:shadow-2xl cursor-pointer whitespace-nowrap transform hover:scale-110 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed animate-bounce-slow group form-button"
+                  onTouchStart={(e) => e.preventDefault()}
                 >
                   {/* shiny sweep animation */}
                   <span className="absolute top-0 left-[-150%] w-[50%] h-full bg-white/30 skew-x-[-20deg] animate-shine"></span>
@@ -551,6 +575,19 @@ export default function ContactPage() {
                     </>
                   )}
                 </button>
+
+                {isMobile && (
+                  <p className="mt-4 text-sm text-gray-600">
+                    Having trouble with the form?{" "}
+                    <button
+                      type="button"
+                      onClick={sendViaWhatsApp}
+                      className="text-blue-600 underline font-medium"
+                    >
+                      Send via WhatsApp instead
+                    </button>
+                  </p>
+                )}
               </div>
             </form>
           </div>

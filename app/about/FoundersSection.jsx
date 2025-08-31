@@ -68,7 +68,7 @@ export default function FoundersSection() {
                             <h3 className="text-2xl font-bold text-gray-900">
                                 {founder.name}
                             </h3>
-                            <p className="text-black text-lg font-medium ">
+                            <p className="text-blue-600 text-lg font-medium font-bold ">
                                 {founder.role}
                             </p>
                         </div>

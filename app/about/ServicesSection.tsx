@@ -121,7 +121,7 @@ export default function ServicesSection() {
             <div className="w-16 h-16 bg-gradient-to-r from-[#46EBEB] to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
               <i className="ri-book-open-line text-white text-2xl"></i>
             </div>
-            <h3 className="text-4xl font-semibold text-blue-600 mb-6 font-serif italic">
+            <h3 className="text-4xl font-bold text-blue-600 mb-6 ">
               Study Abroad Consulting
             </h3>
             <p className="text-lg text-gray-700 font-bold mb-8 leading-relaxed font-inter">
@@ -147,7 +147,7 @@ export default function ServicesSection() {
                   <h4 className="text-lg font-bold text-gray-800">
                     {d.country}
                   </h4>
-                  <p className="text-xs text-gray-600">Premier Universities</p>
+                  {/* <p className="text-xs text-gray-600">Premier Universities</p> */}
                 </div>
               </div>
             ))}
@@ -164,7 +164,7 @@ export default function ServicesSection() {
             <div className="w-16 h-16 bg-gradient-to-r from-[#46EBEB] to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
               <i className="ri-briefcase-line text-white text-2xl"></i>
             </div>
-            <h3 className="text-4xl font-semibold text-blue-600 mb-6 font-serif italic">
+            <h3 className="text-4xl font-bold text-blue-600 mb-6 ">
               Overseas Job Assistance
             </h3>
             <p className="text-lg text-gray-700 font-bold mb-8 leading-relaxed font-inter">
@@ -190,7 +190,7 @@ export default function ServicesSection() {
                   <h4 className="text-base md:text-lg font-bold text-gray-800">
                     {d.country}
                   </h4>
-                  <p className="text-xs text-gray-600">Career Opportunities</p>
+                  {/* <p className="text-xs text-gray-600">Career Opportunities</p> */}
                 </div>
               </div>
             ))}

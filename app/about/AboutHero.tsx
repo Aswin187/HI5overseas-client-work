@@ -31,12 +31,10 @@ export default function AboutHero() {
         >
           {/* Glassmorphism Card */}
           <div className="backdrop-blur-xl bg-white/50 rounded-3xl p-12 border border-white/70 shadow-2xl mb-12">
-            <h1 className="text-5xl md:text-6xl font-bold text-black mb-8 leading-tight">
+            <h2 className="text-4xl md:text-6xl font-bold text-gray-800 mb-6 leading-tight font-poppins">
               Your Journey
-              <span className="block text-transparent bg-clip-text text-blue-500">
-                Our Mission
-              </span>
-            </h1>
+              <span className="block text-blue-500">Our Mission</span>
+            </h2>
 
             <p className="text-lg text-black/90 mb-8 leading-relaxed font-inter">
               We understand that choosing to Study or Work abroad isn't just a

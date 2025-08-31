@@ -129,7 +129,7 @@ export default function Home() {
                     Hi5Overseas
                   </span>
                 </h1>
-                <h2 className="text-2xl md:text-3xl font-semibold text-blue-400 mb-6 font-serif italic">
+                <h2 className="text-2xl md:text-3xl font-bold text-blue-400 mb-6">
                   Elevate Your Ambitions Across Continents
                 </h2>
 
@@ -252,7 +252,7 @@ export default function Home() {
 
               {/* Destinations */}
               <div className="mb-8">
-                <h3 className="text-xl font-semibold text-blue-400 mb-6 font-serif italic">
+                <h3 className="text-xl font-bold text-blue-400 mb-6 ">
                   Our Top Student Destinations:
                 </h3>
                 <div className="grid grid-cols-2 gap-4">
@@ -278,7 +278,7 @@ export default function Home() {
 
               {/* Services List */}
               <div className="space-y-3">
-                <h3 className="text-lg font-semibold text-blue-400 mb-6 font-serif italic">
+                <h3 className="text-lg font-bold text-blue-400 mb-6 ">
                   How We Can Assist You:
                 </h3>
                 {[
@@ -323,7 +323,7 @@ export default function Home() {
 
               {/* Work Destinations - Updated with Cards */}
               <div className="mb-8">
-                <h3 className="text-xl font-bold text-blue-400 mb-6 font-serif italic">
+                <h3 className="text-xl font-bold text-blue-400 mb-6 ">
                   Our Global Presence
                 </h3>
                 <div className="grid md:grid-cols-2 gap-4">
@@ -456,7 +456,7 @@ export default function Home() {
 
               {/* Services List */}
               <div className="space-y-3">
-                <h3 className="text-lg font-semibold text-blue-400 mb-6 font-serif italic">
+                <h3 className="text-lg font-bold text-blue-400 mb-6 ">
                   Our Job Support Includes:
                 </h3>
                 {[
@@ -535,7 +535,7 @@ export default function Home() {
                   <div className="w-16 h-16 bg-gradient-to-r from-[#46EBEB] to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:scale-110 transition-transform duration-500">
                     <i className="ri-heart-line text-2xl text-white"></i>
                   </div>
-                  <h3 className="font-bold text-black-700 text-2xl font-serif italic">
+                  <h3 className="font-bold text-black-700 text-2xl mb-2 ">
                     Real Advice
                   </h3>
                   <p className="text-lg text-black-700 mb-8 leading-relaxed font-inter">
@@ -558,7 +558,7 @@ export default function Home() {
                   <div className="w-16 h-16 bg-gradient-to-r from-[#46EBEB] to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:scale-110 transition-transform duration-500">
                     <i className="ri-shield-check-line text-2xl text-white"></i>
                   </div>
-                  <h3 className="font-bold text-black-700 text-2xl font-serif italic">
+                  <h3 className="font-bold text-black-700 text-2xl mb-2">
                     Honest Work
                   </h3>
                   <p className="text-lg text-black-700 mb-8 leading-relaxed font-inter">
@@ -581,7 +581,7 @@ export default function Home() {
                   <div className="w-16 h-16 bg-gradient-to-r from-[#46EBEB] to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:scale-110 transition-transform duration-500">
                     <i className="ri-trophy-line text-2xl text-white"></i>
                   </div>
-                  <h3 className="font-bold text-black-700 text-2xl font-serif italic">
+                  <h3 className="font-bold text-black-700 text-2xl mb-2">
                     Success Stories
                   </h3>
                   <p className="text-lg text-black-700 mb-8 leading-relaxed font-inter">
