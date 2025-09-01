@@ -139,7 +139,7 @@ export default function Footer() {
                     <h4 className="font-semibold text-white mb-1">Visit Us</h4>
                     <p className="text-gray-300 text-sm">
                       Hi5 overseas Cabin no 11 2nd floor Gulecha Tower Arcot
-                      Road Vadapalani-600026
+                      Road Vadapalani-600026 Chennai
                     </p>
                   </div>
                 </div>
