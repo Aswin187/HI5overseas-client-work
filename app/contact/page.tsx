@@ -285,7 +285,7 @@ export default function ContactPage() {
                 <p className="text-lg text-black-600 font-semibold mb-8 leading-relaxed font-inter">
                   <i className="ri-map-pin-2-line mr-2 text-blue-600"></i>
                   Hi5 overseas Cabin no 11 2nd floor Gulecha Tower Arcot Road
-                  Vadapalani-600026 Chennai
+                  Vadapalani Chennai - 600026
                 </p>
                 <p className="text-lg text-black-600 font-semibold mb-8 leading-relaxed font-inter">
                   <i className="ri-time-line mr-2 text-blue-600"></i>
