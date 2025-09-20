@@ -29,7 +29,7 @@ export default function FoundersSection() {
             role: 'Co-Founder & Director',
         },
         {
-            name: 'YUVARAJ KALLIMUTHU',
+            name: 'YUVARAJ KALIMUTHU',
             role: 'Co-Founder & Director',
         },
     ];
